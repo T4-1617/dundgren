@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Acme.Properties
+namespace Acme_v1.Properties
 {
 
 
