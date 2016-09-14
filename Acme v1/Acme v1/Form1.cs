@@ -15,7 +15,7 @@ namespace Acme_v1
         public Form1()
         {
             InitializeComponent();
-            //Hej hej
+            
         }
     }
 }
