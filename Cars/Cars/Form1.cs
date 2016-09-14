@@ -12,9 +12,12 @@ namespace Cars
 {
     public partial class Form1 : Form
     {
+        System.Collections.ArrayList MyCars;
+
         public Form1()
         {
             InitializeComponent();
+            MyCars = new System.Collections.ArrayList();
         }
     }
 }
