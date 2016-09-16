@@ -46,9 +46,19 @@ namespace RentaCar
 
         private void listShowCar_SelectedIndexChanged(object sender, EventArgs e)
         {
-            pnlInfo.Visible = true;
-            lblMake = Index.Make;
 
+            Car x = (Car)Cars[listShowCar.SelectedIndex];
+            pnlInfo.Visible = true;
+            lblMake.Text = x.Make;
+            lblModel.Text = x.Model;
+            lblColor.Text = x.Color;
+            label5.Text = string.Format("{0}", x.Rented);
+
+        }
+
+        private void btnRent_Click(object sender, EventArgs e)
+        {
+            x.Rented = true;
 
         }
     }

@@ -33,16 +33,17 @@
             this.ReturnCar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlShowCars = new System.Windows.Forms.Panel();
+            this.pnlInfo = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblColor = new System.Windows.Forms.Label();
             this.btnRent = new System.Windows.Forms.Button();
+            this.lblModel = new System.Windows.Forms.Label();
+            this.lblMake = new System.Windows.Forms.Label();
             this.listShowCar = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnlInfo = new System.Windows.Forms.Panel();
-            this.lblMake = new System.Windows.Forms.Label();
-            this.lblModel = new System.Windows.Forms.Label();
-            this.lblColor = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.pnlShowCars.SuspendLayout();
             this.pnlInfo.SuspendLayout();
             this.SuspendLayout();
@@ -93,6 +94,57 @@
             this.pnlShowCars.Size = new System.Drawing.Size(259, 167);
             this.pnlShowCars.TabIndex = 5;
             // 
+            // pnlInfo
+            // 
+            this.pnlInfo.Controls.Add(this.label5);
+            this.pnlInfo.Controls.Add(this.label4);
+            this.pnlInfo.Controls.Add(this.label3);
+            this.pnlInfo.Controls.Add(this.label2);
+            this.pnlInfo.Controls.Add(this.lblColor);
+            this.pnlInfo.Controls.Add(this.btnRent);
+            this.pnlInfo.Controls.Add(this.lblModel);
+            this.pnlInfo.Controls.Add(this.lblMake);
+            this.pnlInfo.Location = new System.Drawing.Point(133, 4);
+            this.pnlInfo.Name = "pnlInfo";
+            this.pnlInfo.Size = new System.Drawing.Size(123, 160);
+            this.pnlInfo.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(4, 38);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Color:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(4, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Model:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(4, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Make:";
+            // 
+            // lblColor
+            // 
+            this.lblColor.AutoSize = true;
+            this.lblColor.Location = new System.Drawing.Point(44, 38);
+            this.lblColor.Name = "lblColor";
+            this.lblColor.Size = new System.Drawing.Size(35, 13);
+            this.lblColor.TabIndex = 2;
+            this.lblColor.Text = "label3";
+            // 
             // btnRent
             // 
             this.btnRent.Location = new System.Drawing.Point(20, 134);
@@ -101,6 +153,25 @@
             this.btnRent.TabIndex = 1;
             this.btnRent.Text = "Rent";
             this.btnRent.UseVisualStyleBackColor = true;
+            this.btnRent.Click += new System.EventHandler(this.btnRent_Click);
+            // 
+            // lblModel
+            // 
+            this.lblModel.AutoSize = true;
+            this.lblModel.Location = new System.Drawing.Point(44, 21);
+            this.lblModel.Name = "lblModel";
+            this.lblModel.Size = new System.Drawing.Size(35, 13);
+            this.lblModel.TabIndex = 1;
+            this.lblModel.Text = "label2";
+            // 
+            // lblMake
+            // 
+            this.lblMake.AutoSize = true;
+            this.lblMake.Location = new System.Drawing.Point(44, 4);
+            this.lblMake.Name = "lblMake";
+            this.lblMake.Size = new System.Drawing.Size(35, 13);
+            this.lblMake.TabIndex = 0;
+            this.lblMake.Text = "label2";
             // 
             // listShowCar
             // 
@@ -118,73 +189,14 @@
             this.panel1.Size = new System.Drawing.Size(259, 167);
             this.panel1.TabIndex = 6;
             // 
-            // pnlInfo
+            // label5
             // 
-            this.pnlInfo.Controls.Add(this.label4);
-            this.pnlInfo.Controls.Add(this.label3);
-            this.pnlInfo.Controls.Add(this.label2);
-            this.pnlInfo.Controls.Add(this.lblColor);
-            this.pnlInfo.Controls.Add(this.btnRent);
-            this.pnlInfo.Controls.Add(this.lblModel);
-            this.pnlInfo.Controls.Add(this.lblMake);
-            this.pnlInfo.Location = new System.Drawing.Point(133, 4);
-            this.pnlInfo.Name = "pnlInfo";
-            this.pnlInfo.Size = new System.Drawing.Size(123, 160);
-            this.pnlInfo.TabIndex = 2;
-            // 
-            // lblMake
-            // 
-            this.lblMake.AutoSize = true;
-            this.lblMake.Location = new System.Drawing.Point(85, 4);
-            this.lblMake.Name = "lblMake";
-            this.lblMake.Size = new System.Drawing.Size(35, 13);
-            this.lblMake.TabIndex = 0;
-            this.lblMake.Text = "label2";
-            // 
-            // lblModel
-            // 
-            this.lblModel.AutoSize = true;
-            this.lblModel.Location = new System.Drawing.Point(85, 21);
-            this.lblModel.Name = "lblModel";
-            this.lblModel.Size = new System.Drawing.Size(35, 13);
-            this.lblModel.TabIndex = 1;
-            this.lblModel.Text = "label2";
-            // 
-            // lblColor
-            // 
-            this.lblColor.AutoSize = true;
-            this.lblColor.Location = new System.Drawing.Point(85, 38);
-            this.lblColor.Name = "lblColor";
-            this.lblColor.Size = new System.Drawing.Size(35, 13);
-            this.lblColor.TabIndex = 2;
-            this.lblColor.Text = "label3";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 4);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Make:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Model:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 38);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Color:";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(37, 68);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "label5";
             // 
             // Form1
             // 
@@ -224,6 +236,7 @@
         private System.Windows.Forms.Label lblColor;
         private System.Windows.Forms.Label lblModel;
         private System.Windows.Forms.Label lblMake;
+        private System.Windows.Forms.Label label5;
     }
 }
 
