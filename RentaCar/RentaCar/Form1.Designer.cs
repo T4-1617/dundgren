@@ -32,7 +32,10 @@
             this.AddCar = new System.Windows.Forms.Button();
             this.ReturnCar = new System.Windows.Forms.Button();
             this.pnlShowCars = new System.Windows.Forms.Panel();
+            this.CarsAvailable = new System.Windows.Forms.Label();
             this.pnlInfo = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtCustomer = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,28 +45,31 @@
             this.lblMake = new System.Windows.Forms.Label();
             this.listShowCar = new System.Windows.Forms.ListBox();
             this.pnlAddCar = new System.Windows.Forms.Panel();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.txtColor = new System.Windows.Forms.TextBox();
+            this.txtModel = new System.Windows.Forms.TextBox();
+            this.txtMake = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.lblMakeAdd = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtMake = new System.Windows.Forms.TextBox();
-            this.txtModel = new System.Windows.Forms.TextBox();
-            this.txtColor = new System.Windows.Forms.TextBox();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.pnlReturnCar = new System.Windows.Forms.Panel();
-            this.listReturnCar = new System.Windows.Forms.ListBox();
             this.btnReturn = new System.Windows.Forms.Button();
-            this.CarsAvailable = new System.Windows.Forms.Label();
+            this.listReturnCar = new System.Windows.Forms.ListBox();
+            this.btnRents = new System.Windows.Forms.Button();
+            this.pnlRents = new System.Windows.Forms.Panel();
+            this.listRents = new System.Windows.Forms.ListBox();
             this.pnlShowCars.SuspendLayout();
             this.pnlInfo.SuspendLayout();
             this.pnlAddCar.SuspendLayout();
             this.pnlReturnCar.SuspendLayout();
+            this.pnlRents.SuspendLayout();
             this.SuspendLayout();
             // 
             // ShowCars
             // 
             this.ShowCars.Location = new System.Drawing.Point(12, 22);
             this.ShowCars.Name = "ShowCars";
-            this.ShowCars.Size = new System.Drawing.Size(76, 44);
+            this.ShowCars.Size = new System.Drawing.Size(50, 44);
             this.ShowCars.TabIndex = 0;
             this.ShowCars.Text = "Show Cars";
             this.ShowCars.UseVisualStyleBackColor = true;
@@ -71,9 +77,9 @@
             // 
             // AddCar
             // 
-            this.AddCar.Location = new System.Drawing.Point(103, 22);
+            this.AddCar.Location = new System.Drawing.Point(68, 22);
             this.AddCar.Name = "AddCar";
-            this.AddCar.Size = new System.Drawing.Size(76, 44);
+            this.AddCar.Size = new System.Drawing.Size(50, 44);
             this.AddCar.TabIndex = 1;
             this.AddCar.Text = "Add Car";
             this.AddCar.UseVisualStyleBackColor = true;
@@ -81,9 +87,9 @@
             // 
             // ReturnCar
             // 
-            this.ReturnCar.Location = new System.Drawing.Point(193, 23);
+            this.ReturnCar.Location = new System.Drawing.Point(124, 22);
             this.ReturnCar.Name = "ReturnCar";
-            this.ReturnCar.Size = new System.Drawing.Size(76, 44);
+            this.ReturnCar.Size = new System.Drawing.Size(50, 44);
             this.ReturnCar.TabIndex = 2;
             this.ReturnCar.Text = "Return Car";
             this.ReturnCar.UseVisualStyleBackColor = true;
@@ -99,8 +105,20 @@
             this.pnlShowCars.Size = new System.Drawing.Size(259, 181);
             this.pnlShowCars.TabIndex = 5;
             // 
+            // CarsAvailable
+            // 
+            this.CarsAvailable.AutoSize = true;
+            this.CarsAvailable.Location = new System.Drawing.Point(3, 168);
+            this.CarsAvailable.Name = "CarsAvailable";
+            this.CarsAvailable.Size = new System.Drawing.Size(131, 13);
+            this.CarsAvailable.TabIndex = 5;
+            this.CarsAvailable.Text = "We have 3 cars available!";
+            this.CarsAvailable.Click += new System.EventHandler(this.CarsAvailable_Click);
+            // 
             // pnlInfo
             // 
+            this.pnlInfo.Controls.Add(this.label1);
+            this.pnlInfo.Controls.Add(this.txtCustomer);
             this.pnlInfo.Controls.Add(this.label4);
             this.pnlInfo.Controls.Add(this.label3);
             this.pnlInfo.Controls.Add(this.label2);
@@ -112,6 +130,22 @@
             this.pnlInfo.Name = "pnlInfo";
             this.pnlInfo.Size = new System.Drawing.Size(123, 160);
             this.pnlInfo.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 73);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Customer name";
+            // 
+            // txtCustomer
+            // 
+            this.txtCustomer.Location = new System.Drawing.Point(7, 92);
+            this.txtCustomer.Name = "txtCustomer";
+            this.txtCustomer.Size = new System.Drawing.Size(113, 20);
+            this.txtCustomer.TabIndex = 6;
             // 
             // label4
             // 
@@ -195,10 +229,41 @@
             this.pnlAddCar.Controls.Add(this.label8);
             this.pnlAddCar.Controls.Add(this.lblMakeAdd);
             this.pnlAddCar.Controls.Add(this.label6);
-            this.pnlAddCar.Location = new System.Drawing.Point(335, 82);
+            this.pnlAddCar.Location = new System.Drawing.Point(314, 82);
             this.pnlAddCar.Name = "pnlAddCar";
             this.pnlAddCar.Size = new System.Drawing.Size(259, 167);
             this.pnlAddCar.TabIndex = 6;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(8, 86);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(248, 75);
+            this.btnAdd.TabIndex = 6;
+            this.btnAdd.Text = "Add Car";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtColor
+            // 
+            this.txtColor.Location = new System.Drawing.Point(48, 60);
+            this.txtColor.Name = "txtColor";
+            this.txtColor.Size = new System.Drawing.Size(208, 20);
+            this.txtColor.TabIndex = 5;
+            // 
+            // txtModel
+            // 
+            this.txtModel.Location = new System.Drawing.Point(48, 34);
+            this.txtModel.Name = "txtModel";
+            this.txtModel.Size = new System.Drawing.Size(208, 20);
+            this.txtModel.TabIndex = 4;
+            // 
+            // txtMake
+            // 
+            this.txtMake.Location = new System.Drawing.Point(48, 8);
+            this.txtMake.Name = "txtMake";
+            this.txtMake.Size = new System.Drawing.Size(208, 20);
+            this.txtMake.TabIndex = 3;
             // 
             // label8
             // 
@@ -227,54 +292,14 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Model:";
             // 
-            // txtMake
-            // 
-            this.txtMake.Location = new System.Drawing.Point(48, 8);
-            this.txtMake.Name = "txtMake";
-            this.txtMake.Size = new System.Drawing.Size(208, 20);
-            this.txtMake.TabIndex = 3;
-            // 
-            // txtModel
-            // 
-            this.txtModel.Location = new System.Drawing.Point(48, 34);
-            this.txtModel.Name = "txtModel";
-            this.txtModel.Size = new System.Drawing.Size(208, 20);
-            this.txtModel.TabIndex = 4;
-            // 
-            // txtColor
-            // 
-            this.txtColor.Location = new System.Drawing.Point(48, 60);
-            this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(208, 20);
-            this.txtColor.TabIndex = 5;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(8, 86);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(248, 75);
-            this.btnAdd.TabIndex = 6;
-            this.btnAdd.Text = "Add Car";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.button1_Click);
-            // 
             // pnlReturnCar
             // 
             this.pnlReturnCar.Controls.Add(this.btnReturn);
             this.pnlReturnCar.Controls.Add(this.listReturnCar);
-            this.pnlReturnCar.Location = new System.Drawing.Point(652, 86);
+            this.pnlReturnCar.Location = new System.Drawing.Point(592, 80);
             this.pnlReturnCar.Name = "pnlReturnCar";
             this.pnlReturnCar.Size = new System.Drawing.Size(259, 167);
             this.pnlReturnCar.TabIndex = 6;
-            // 
-            // listReturnCar
-            // 
-            this.listReturnCar.FormattingEnabled = true;
-            this.listReturnCar.Location = new System.Drawing.Point(4, 7);
-            this.listReturnCar.Name = "listReturnCar";
-            this.listReturnCar.Size = new System.Drawing.Size(252, 121);
-            this.listReturnCar.TabIndex = 0;
-            this.listReturnCar.SelectedIndexChanged += new System.EventHandler(this.listReturnCar_SelectedIndexChanged);
             // 
             // btnReturn
             // 
@@ -286,21 +311,50 @@
             this.btnReturn.UseVisualStyleBackColor = true;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
-            // CarsAvailable
+            // listReturnCar
             // 
-            this.CarsAvailable.AutoSize = true;
-            this.CarsAvailable.Location = new System.Drawing.Point(3, 168);
-            this.CarsAvailable.Name = "CarsAvailable";
-            this.CarsAvailable.Size = new System.Drawing.Size(131, 13);
-            this.CarsAvailable.TabIndex = 5;
-            this.CarsAvailable.Text = "We have 3 cars available!";
-            this.CarsAvailable.Click += new System.EventHandler(this.CarsAvailable_Click);
+            this.listReturnCar.FormattingEnabled = true;
+            this.listReturnCar.Location = new System.Drawing.Point(4, 7);
+            this.listReturnCar.Name = "listReturnCar";
+            this.listReturnCar.Size = new System.Drawing.Size(252, 121);
+            this.listReturnCar.TabIndex = 0;
+            this.listReturnCar.SelectedIndexChanged += new System.EventHandler(this.listReturnCar_SelectedIndexChanged);
+            // 
+            // btnRents
+            // 
+            this.btnRents.Location = new System.Drawing.Point(180, 22);
+            this.btnRents.Name = "btnRents";
+            this.btnRents.Size = new System.Drawing.Size(50, 44);
+            this.btnRents.TabIndex = 7;
+            this.btnRents.Text = "Rented Cars";
+            this.btnRents.UseVisualStyleBackColor = true;
+            this.btnRents.Click += new System.EventHandler(this.btnRents_Click_1);
+            // 
+            // pnlRents
+            // 
+            this.pnlRents.Controls.Add(this.listRents);
+            this.pnlRents.Location = new System.Drawing.Point(870, 80);
+            this.pnlRents.Name = "pnlRents";
+            this.pnlRents.Size = new System.Drawing.Size(259, 167);
+            this.pnlRents.TabIndex = 7;
+            this.pnlRents.Paint += new System.Windows.Forms.PaintEventHandler(this.listRentedCars_Paint);
+            // 
+            // listRents
+            // 
+            this.listRents.FormattingEnabled = true;
+            this.listRents.Location = new System.Drawing.Point(4, 4);
+            this.listRents.Name = "listRents";
+            this.listRents.Size = new System.Drawing.Size(252, 160);
+            this.listRents.TabIndex = 0;
+            this.listRents.SelectedIndexChanged += new System.EventHandler(this.listRents_SelectedIndexChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1249, 261);
+            this.Controls.Add(this.pnlRents);
+            this.Controls.Add(this.btnRents);
             this.Controls.Add(this.pnlReturnCar);
             this.Controls.Add(this.pnlAddCar);
             this.Controls.Add(this.pnlShowCars);
@@ -316,6 +370,7 @@
             this.pnlAddCar.ResumeLayout(false);
             this.pnlAddCar.PerformLayout();
             this.pnlReturnCar.ResumeLayout(false);
+            this.pnlRents.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -347,6 +402,11 @@
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.ListBox listReturnCar;
         private System.Windows.Forms.Label CarsAvailable;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtCustomer;
+        private System.Windows.Forms.Button btnRents;
+        private System.Windows.Forms.Panel pnlRents;
+        private System.Windows.Forms.ListBox listRents;
     }
 }
 
