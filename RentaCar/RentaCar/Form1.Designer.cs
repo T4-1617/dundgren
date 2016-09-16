@@ -58,6 +58,7 @@
             this.btnRents = new System.Windows.Forms.Button();
             this.pnlRents = new System.Windows.Forms.Panel();
             this.listRents = new System.Windows.Forms.ListBox();
+            this.lblWarning = new System.Windows.Forms.Label();
             this.pnlShowCars.SuspendLayout();
             this.pnlInfo.SuspendLayout();
             this.pnlAddCar.SuspendLayout();
@@ -97,6 +98,7 @@
             // 
             // pnlShowCars
             // 
+            this.pnlShowCars.Controls.Add(this.lblWarning);
             this.pnlShowCars.Controls.Add(this.CarsAvailable);
             this.pnlShowCars.Controls.Add(this.pnlInfo);
             this.pnlShowCars.Controls.Add(this.listShowCar);
@@ -108,7 +110,7 @@
             // CarsAvailable
             // 
             this.CarsAvailable.AutoSize = true;
-            this.CarsAvailable.Location = new System.Drawing.Point(3, 168);
+            this.CarsAvailable.Location = new System.Drawing.Point(-1, 168);
             this.CarsAvailable.Name = "CarsAvailable";
             this.CarsAvailable.Size = new System.Drawing.Size(131, 13);
             this.CarsAvailable.TabIndex = 5;
@@ -348,6 +350,15 @@
             this.listRents.TabIndex = 0;
             this.listRents.SelectedIndexChanged += new System.EventHandler(this.listRents_SelectedIndexChanged);
             // 
+            // lblWarning
+            // 
+            this.lblWarning.AutoSize = true;
+            this.lblWarning.Location = new System.Drawing.Point(131, 168);
+            this.lblWarning.Name = "lblWarning";
+            this.lblWarning.Size = new System.Drawing.Size(35, 13);
+            this.lblWarning.TabIndex = 6;
+            this.lblWarning.Text = "label5";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -407,6 +418,7 @@
         private System.Windows.Forms.Button btnRents;
         private System.Windows.Forms.Panel pnlRents;
         private System.Windows.Forms.ListBox listRents;
+        private System.Windows.Forms.Label lblWarning;
     }
 }
 

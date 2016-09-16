@@ -23,6 +23,7 @@ namespace RentaCar
             pnlAddCar.Visible = false;//Hide panel
             pnlReturnCar.Visible = false;//Hide panel
             pnlRents.Visible = false;
+            lblWarning.Visible = false;
 
 
 
@@ -74,7 +75,17 @@ namespace RentaCar
         private void btnRent_Click(object sender, EventArgs e)
         {
             Car x = (Car)listShowCar.SelectedItem;
-            x.Rented = true;//Changes value of a property of the chosen Item.
+            if (txtCustomer.TextLength > 1)
+            {
+                x.Rented = true;//Changes value of a property of the chosen Item.
+                lblWarning.Visible = false;
+            }
+
+            else
+            {
+                lblWarning.Visible = true;
+                lblWarning.Text = "You must enter your name!";
+            }
             x.CustomerName = txtCustomer.Text;
             listShowCar.Items.Clear();//Clears list for update
             pnlInfo.Visible = false;
