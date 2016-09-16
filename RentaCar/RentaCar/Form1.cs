@@ -30,22 +30,24 @@ namespace RentaCar
         private void ShowCars_Click(object sender, EventArgs e)
         {
             pnlShowCars.Visible = true;
-            btnRent.Visible = false;
+            pnlInfo.Visible = false;
 
-            foreach (var x in Cars)
+
+            foreach (Car Item in Cars)
             {
-                if(x.GetType().Make)
-                listShowCar.Items.Add(x);
-                listShowCar.DisplayMember = "MakeAndModel";
-
+                if (Item.Rented == false)
+                {
+                    listShowCar.Items.Add(Item);
+                    listShowCar.DisplayMember = "MakeAndModel";
+                }
             }
 
         }
 
         private void listShowCar_SelectedIndexChanged(object sender, EventArgs e)
         {
-            btnRent.Visible = true;
-            
+            pnlInfo.Visible = true;
+            lblMake = Index.Make;
 
 
         }
