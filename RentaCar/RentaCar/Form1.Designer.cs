@@ -32,10 +32,10 @@
             this.AddCar = new System.Windows.Forms.Button();
             this.ReturnCar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.pnlShowCars = new System.Windows.Forms.Panel();
             this.btnRent = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.listShowCar = new System.Windows.Forms.ListBox();
+            this.pnlShowCars.SuspendLayout();
             this.SuspendLayout();
             // 
             // ShowCars
@@ -46,6 +46,7 @@
             this.ShowCars.TabIndex = 0;
             this.ShowCars.Text = "Show Cars";
             this.ShowCars.UseVisualStyleBackColor = true;
+            this.ShowCars.Click += new System.EventHandler(this.ShowCars_Click);
             // 
             // AddCar
             // 
@@ -74,22 +75,14 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "label1";
             // 
-            // panel1
+            // pnlShowCars
             // 
-            this.panel1.Controls.Add(this.btnRent);
-            this.panel1.Controls.Add(this.listBox1);
-            this.panel1.Location = new System.Drawing.Point(13, 82);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(259, 167);
-            this.panel1.TabIndex = 5;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(4, 4);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(252, 121);
-            this.listBox1.TabIndex = 0;
+            this.pnlShowCars.Controls.Add(this.btnRent);
+            this.pnlShowCars.Controls.Add(this.listShowCar);
+            this.pnlShowCars.Location = new System.Drawing.Point(13, 82);
+            this.pnlShowCars.Name = "pnlShowCars";
+            this.pnlShowCars.Size = new System.Drawing.Size(259, 167);
+            this.pnlShowCars.TabIndex = 5;
             // 
             // btnRent
             // 
@@ -100,19 +93,28 @@
             this.btnRent.Text = "Rent";
             this.btnRent.UseVisualStyleBackColor = true;
             // 
+            // listShowCar
+            // 
+            this.listShowCar.FormattingEnabled = true;
+            this.listShowCar.Location = new System.Drawing.Point(4, 4);
+            this.listShowCar.Name = "listShowCar";
+            this.listShowCar.Size = new System.Drawing.Size(252, 121);
+            this.listShowCar.TabIndex = 0;
+            this.listShowCar.SelectedIndexChanged += new System.EventHandler(this.listShowCar_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlShowCars);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ReturnCar);
             this.Controls.Add(this.AddCar);
             this.Controls.Add(this.ShowCars);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.panel1.ResumeLayout(false);
+            this.pnlShowCars.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,9 +126,9 @@
         private System.Windows.Forms.Button AddCar;
         private System.Windows.Forms.Button ReturnCar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlShowCars;
         private System.Windows.Forms.Button btnRent;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listShowCar;
     }
 }
 
