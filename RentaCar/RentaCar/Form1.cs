@@ -35,7 +35,7 @@ namespace RentaCar
 
             foreach (Car Item in Cars)
             {
-                if (Item.Rented == false)
+                if (!Item.Rented)
                 {
                     listShowCar.Items.Add(Item);
                     listShowCar.DisplayMember = "MakeAndModel";
@@ -52,13 +52,23 @@ namespace RentaCar
             lblMake.Text = x.Make;
             lblModel.Text = x.Model;
             lblColor.Text = x.Color;
-            label5.Text = string.Format("{0}", x.Rented);
 
         }
 
         private void btnRent_Click(object sender, EventArgs e)
         {
+            Car x = (Car)Cars[listShowCar.SelectedIndex];
             x.Rented = true;
+            listShowCar.Items.Clear();
+
+            foreach (Car Item in Cars)
+            {
+                if (!Item.Rented)
+                {
+                    listShowCar.Items.Add(Item);
+                    listShowCar.DisplayMember = "MakeAndModel";
+                }
+            }
 
         }
     }
