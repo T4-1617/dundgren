@@ -22,7 +22,7 @@ namespace RentaCar
             pnlShowCars.Visible = false;//Hide panel
             pnlAddCar.Visible = false;//Hide panel
             pnlReturnCar.Visible = false;//Hide panel
-            pnlRents.Visible = false;
+            panel1.Visible = false;
             lblWarning.Visible = false;
 
 
@@ -40,7 +40,7 @@ namespace RentaCar
             pnlInfo.Visible = false;//hides panel
             pnlAddCar.Visible = false;
             pnlReturnCar.Visible = false;
-            pnlRents.Visible = false;
+            panel1.Visible = false;
 
             AvailableCars = 0;//"Clears" car-counter for an update
 
@@ -113,7 +113,7 @@ namespace RentaCar
             pnlShowCars.Visible = false;
             pnlAddCar.Visible = true;
             pnlReturnCar.Visible = false;
-            pnlRents.Visible = false;
+            panel1.Visible = false;
 
 
 
@@ -136,7 +136,7 @@ namespace RentaCar
             pnlShowCars.Visible = false;
             pnlAddCar.Visible = false;
             btnReturn.Visible = false;
-            pnlRents.Visible = false;
+            panel1.Visible = false;
 
             foreach (Car Item in Cars)
             {
@@ -191,7 +191,7 @@ namespace RentaCar
             pnlReturnCar.Visible = false;
             pnlShowCars.Visible = false;
             pnlAddCar.Visible = false;
-            pnlRents.Visible = true;
+            panel1.Visible = true;
 
             foreach (Car Item in Cars)
             {

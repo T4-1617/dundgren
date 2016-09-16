@@ -56,14 +56,14 @@
             this.btnReturn = new System.Windows.Forms.Button();
             this.listReturnCar = new System.Windows.Forms.ListBox();
             this.btnRents = new System.Windows.Forms.Button();
-            this.pnlRents = new System.Windows.Forms.Panel();
-            this.listRents = new System.Windows.Forms.ListBox();
             this.lblWarning = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.listRents = new System.Windows.Forms.ListBox();
             this.pnlShowCars.SuspendLayout();
             this.pnlInfo.SuspendLayout();
             this.pnlAddCar.SuspendLayout();
             this.pnlReturnCar.SuspendLayout();
-            this.pnlRents.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ShowCars
@@ -231,7 +231,7 @@
             this.pnlAddCar.Controls.Add(this.label8);
             this.pnlAddCar.Controls.Add(this.lblMakeAdd);
             this.pnlAddCar.Controls.Add(this.label6);
-            this.pnlAddCar.Location = new System.Drawing.Point(314, 82);
+            this.pnlAddCar.Location = new System.Drawing.Point(12, 70);
             this.pnlAddCar.Name = "pnlAddCar";
             this.pnlAddCar.Size = new System.Drawing.Size(259, 167);
             this.pnlAddCar.TabIndex = 6;
@@ -298,7 +298,7 @@
             // 
             this.pnlReturnCar.Controls.Add(this.btnReturn);
             this.pnlReturnCar.Controls.Add(this.listReturnCar);
-            this.pnlReturnCar.Location = new System.Drawing.Point(592, 80);
+            this.pnlReturnCar.Location = new System.Drawing.Point(12, 67);
             this.pnlReturnCar.Name = "pnlReturnCar";
             this.pnlReturnCar.Size = new System.Drawing.Size(259, 167);
             this.pnlReturnCar.TabIndex = 6;
@@ -332,24 +332,6 @@
             this.btnRents.UseVisualStyleBackColor = true;
             this.btnRents.Click += new System.EventHandler(this.btnRents_Click_1);
             // 
-            // pnlRents
-            // 
-            this.pnlRents.Controls.Add(this.listRents);
-            this.pnlRents.Location = new System.Drawing.Point(870, 80);
-            this.pnlRents.Name = "pnlRents";
-            this.pnlRents.Size = new System.Drawing.Size(259, 167);
-            this.pnlRents.TabIndex = 7;
-            this.pnlRents.Paint += new System.Windows.Forms.PaintEventHandler(this.listRentedCars_Paint);
-            // 
-            // listRents
-            // 
-            this.listRents.FormattingEnabled = true;
-            this.listRents.Location = new System.Drawing.Point(4, 4);
-            this.listRents.Name = "listRents";
-            this.listRents.Size = new System.Drawing.Size(252, 160);
-            this.listRents.TabIndex = 0;
-            this.listRents.SelectedIndexChanged += new System.EventHandler(this.listRents_SelectedIndexChanged);
-            // 
             // lblWarning
             // 
             this.lblWarning.AutoSize = true;
@@ -359,12 +341,28 @@
             this.lblWarning.TabIndex = 6;
             this.lblWarning.Text = "label5";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.listRents);
+            this.panel1.Location = new System.Drawing.Point(342, 64);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(259, 167);
+            this.panel1.TabIndex = 7;
+            // 
+            // listRents
+            // 
+            this.listRents.FormattingEnabled = true;
+            this.listRents.Location = new System.Drawing.Point(4, 7);
+            this.listRents.Name = "listRents";
+            this.listRents.Size = new System.Drawing.Size(252, 121);
+            this.listRents.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1249, 261);
-            this.Controls.Add(this.pnlRents);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnRents);
             this.Controls.Add(this.pnlReturnCar);
             this.Controls.Add(this.pnlAddCar);
@@ -381,7 +379,7 @@
             this.pnlAddCar.ResumeLayout(false);
             this.pnlAddCar.PerformLayout();
             this.pnlReturnCar.ResumeLayout(false);
-            this.pnlRents.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -416,9 +414,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCustomer;
         private System.Windows.Forms.Button btnRents;
-        private System.Windows.Forms.Panel pnlRents;
-        private System.Windows.Forms.ListBox listRents;
         private System.Windows.Forms.Label lblWarning;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ListBox listRents;
     }
 }
 
