@@ -32,6 +32,7 @@
             this.AddCar = new System.Windows.Forms.Button();
             this.ReturnCar = new System.Windows.Forms.Button();
             this.pnlShowCars = new System.Windows.Forms.Panel();
+            this.lblWarning = new System.Windows.Forms.Label();
             this.CarsAvailable = new System.Windows.Forms.Label();
             this.pnlInfo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@
             this.btnReturn = new System.Windows.Forms.Button();
             this.listReturnCar = new System.Windows.Forms.ListBox();
             this.btnRents = new System.Windows.Forms.Button();
-            this.lblWarning = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.listRents = new System.Windows.Forms.ListBox();
             this.pnlShowCars.SuspendLayout();
@@ -106,6 +106,15 @@
             this.pnlShowCars.Name = "pnlShowCars";
             this.pnlShowCars.Size = new System.Drawing.Size(259, 181);
             this.pnlShowCars.TabIndex = 5;
+            // 
+            // lblWarning
+            // 
+            this.lblWarning.AutoSize = true;
+            this.lblWarning.Location = new System.Drawing.Point(131, 168);
+            this.lblWarning.Name = "lblWarning";
+            this.lblWarning.Size = new System.Drawing.Size(35, 13);
+            this.lblWarning.TabIndex = 6;
+            this.lblWarning.Text = "label5";
             // 
             // CarsAvailable
             // 
@@ -332,21 +341,12 @@
             this.btnRents.UseVisualStyleBackColor = true;
             this.btnRents.Click += new System.EventHandler(this.btnRents_Click_1);
             // 
-            // lblWarning
-            // 
-            this.lblWarning.AutoSize = true;
-            this.lblWarning.Location = new System.Drawing.Point(131, 168);
-            this.lblWarning.Name = "lblWarning";
-            this.lblWarning.Size = new System.Drawing.Size(35, 13);
-            this.lblWarning.TabIndex = 6;
-            this.lblWarning.Text = "label5";
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.listRents);
-            this.panel1.Location = new System.Drawing.Point(342, 64);
+            this.panel1.Location = new System.Drawing.Point(12, 68);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(259, 167);
+            this.panel1.Size = new System.Drawing.Size(277, 189);
             this.panel1.TabIndex = 7;
             // 
             // listRents
@@ -361,7 +361,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1249, 261);
+            this.ClientSize = new System.Drawing.Size(299, 261);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnRents);
             this.Controls.Add(this.pnlReturnCar);

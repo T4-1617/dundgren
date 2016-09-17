@@ -12,8 +12,8 @@ namespace RentaCar
 {
     public partial class Form1 : Form
     {
-        System.Collections.ArrayList Cars;//Prepares the use of an arraylist called Cars
-        int AvailableCars = 0;//Int for keeping track of unrented cars
+        System.Collections.ArrayList Cars; //Prepares the use of an arraylist called Cars
+        int AvailableCars = 0; //Int for keeping track of unrented cars
 
         public Form1()
         {
