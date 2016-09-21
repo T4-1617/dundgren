@@ -36,7 +36,7 @@
             this.pnlCustomer = new System.Windows.Forms.Panel();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ComboPeople = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlEmployee = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -44,6 +44,12 @@
             this.pnlSupplier = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.txtCustomerFirstName = new System.Windows.Forms.TextBox();
+            this.lblCustomerFirstName = new System.Windows.Forms.Label();
+            this.txtCustomerLastName = new System.Windows.Forms.TextBox();
+            this.lblCustomerLastName = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.pnlCustomer.SuspendLayout();
             this.pnlEmployee.SuspendLayout();
@@ -84,6 +90,7 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(120, 212);
             this.listBox1.TabIndex = 10;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -96,6 +103,12 @@
             // 
             // pnlCustomer
             // 
+            this.pnlCustomer.Controls.Add(this.txtPhoneNumber);
+            this.pnlCustomer.Controls.Add(this.label3);
+            this.pnlCustomer.Controls.Add(this.lblCustomerLastName);
+            this.pnlCustomer.Controls.Add(this.txtCustomerLastName);
+            this.pnlCustomer.Controls.Add(this.lblCustomerFirstName);
+            this.pnlCustomer.Controls.Add(this.txtCustomerFirstName);
             this.pnlCustomer.Controls.Add(this.btnSave);
             this.pnlCustomer.Controls.Add(this.btnCancel);
             this.pnlCustomer.Location = new System.Drawing.Point(15, 33);
@@ -121,17 +134,18 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // ComboPeople
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.ComboPeople.FormattingEnabled = true;
+            this.ComboPeople.Items.AddRange(new object[] {
             "Kund",
             "Anställd",
             "Leverantör"});
-            this.comboBox1.Location = new System.Drawing.Point(135, 6);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(306, 21);
-            this.comboBox1.TabIndex = 7;
+            this.ComboPeople.Location = new System.Drawing.Point(135, 6);
+            this.ComboPeople.Name = "ComboPeople";
+            this.ComboPeople.Size = new System.Drawing.Size(306, 21);
+            this.ComboPeople.TabIndex = 7;
+            this.ComboPeople.SelectedIndexChanged += new System.EventHandler(this.ComboPeople_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -196,6 +210,54 @@
             this.button4.Text = "Cancel";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // txtCustomerFirstName
+            // 
+            this.txtCustomerFirstName.Location = new System.Drawing.Point(58, 6);
+            this.txtCustomerFirstName.Name = "txtCustomerFirstName";
+            this.txtCustomerFirstName.Size = new System.Drawing.Size(100, 20);
+            this.txtCustomerFirstName.TabIndex = 2;
+            // 
+            // lblCustomerFirstName
+            // 
+            this.lblCustomerFirstName.AutoSize = true;
+            this.lblCustomerFirstName.Location = new System.Drawing.Point(4, 9);
+            this.lblCustomerFirstName.Name = "lblCustomerFirstName";
+            this.lblCustomerFirstName.Size = new System.Drawing.Size(48, 13);
+            this.lblCustomerFirstName.TabIndex = 3;
+            this.lblCustomerFirstName.Text = "Förnamn";
+            // 
+            // txtCustomerLastName
+            // 
+            this.txtCustomerLastName.Location = new System.Drawing.Point(58, 33);
+            this.txtCustomerLastName.Name = "txtCustomerLastName";
+            this.txtCustomerLastName.Size = new System.Drawing.Size(100, 20);
+            this.txtCustomerLastName.TabIndex = 4;
+            // 
+            // lblCustomerLastName
+            // 
+            this.lblCustomerLastName.AutoSize = true;
+            this.lblCustomerLastName.Location = new System.Drawing.Point(3, 36);
+            this.lblCustomerLastName.Name = "lblCustomerLastName";
+            this.lblCustomerLastName.Size = new System.Drawing.Size(55, 13);
+            this.lblCustomerLastName.TabIndex = 5;
+            this.lblCustomerLastName.Text = "Efternamn";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(170, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "TelefonNummer";
+            // 
+            // txtPhoneNumber
+            // 
+            this.txtPhoneNumber.Location = new System.Drawing.Point(259, 5);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(100, 20);
+            this.txtPhoneNumber.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,12 +269,13 @@
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pnlCustomer);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.ComboPeople);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel2.ResumeLayout(false);
             this.pnlCustomer.ResumeLayout(false);
+            this.pnlCustomer.PerformLayout();
             this.pnlEmployee.ResumeLayout(false);
             this.pnlSupplier.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -230,7 +293,7 @@
         private System.Windows.Forms.Panel pnlCustomer;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox ComboPeople;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlEmployee;
         private System.Windows.Forms.Button button1;
@@ -238,6 +301,12 @@
         private System.Windows.Forms.Panel pnlSupplier;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox txtCustomerFirstName;
+        private System.Windows.Forms.Label lblCustomerFirstName;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblCustomerLastName;
+        private System.Windows.Forms.TextBox txtCustomerLastName;
+        private System.Windows.Forms.TextBox txtPhoneNumber;
     }
 }
 

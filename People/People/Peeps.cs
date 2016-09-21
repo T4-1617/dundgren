@@ -10,13 +10,13 @@ namespace People
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public int PhoneNumber { get; set; }
+        public long PhoneNumber { get; set; }
 
-        public virtual string FullName
+        public override string ToString()
         {
-            get { return string.Format("{0} {1}", FirstName, LastName); }
-
+            return string.Format("{0} {1}", FirstName, LastName);
         }
+
     }
 
     public class Customer : Peeps
@@ -30,7 +30,7 @@ namespace People
     {
         public int EmployeeId { get; set; }
         public string Title { get; set; }
-        public decimal Wage { get; set; }
+        public string Wage { get; set; }
     }
 
     public class Supplier : Peeps
