@@ -13,7 +13,10 @@ namespace People
     public partial class Form1 : Form
     {
         System.Collections.ArrayList Peeplist;
-        
+        int CustomerCounter;
+        int EmployeeCounter;
+        int SupplierCounter;
+
         public Form1()
         {
             InitializeComponent();
@@ -35,12 +38,7 @@ namespace People
             pnlEmployeeEdit.Visible = false;
             pnlSupplierEdit.Visible = false;
 
-
-            foreach (var person in Peeplist)
-            {
-                listBox1.Items.Add(person);
-            }
-
+            WriteListBox();
            
 
         }
@@ -56,10 +54,12 @@ namespace People
             switch (listBox1.SelectedItem.GetType().Name)
             {
                 case "Customer":
+                    Customer C = (Customer)listBox1.SelectedItem;
                     pnlEdit.Visible = true;
                     pnlCustomerEdit.Visible = true;
                     pnlEmployeeEdit.Visible = false;
                     pnlSupplierEdit.Visible = false;
+                    txtCustomerId.Text = Convert.ToString(C.CustomerId);
                     break;
 
                 case "Employee":
@@ -70,6 +70,7 @@ namespace People
                     pnlSupplierEdit.Visible = false;
                     txtEmployeeTitleEdit.Text = E.Title;
                     txtEmployeeWageEdit.Text = E.Wage;
+                    txtEmployeeId.Text = Convert.ToString(E.EmployeeId);
                     break;
 
                 case "Supplier":
@@ -125,40 +126,46 @@ namespace People
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Peeplist.Add(new Customer() { FirstName = txtCustomerFirstName.Text, LastName = txtCustomerLastName.Text, CustomerId = 1, PhoneNumber = txtCustomerPhoneNumber.Text });
-            listBox1.Items.Clear();
-            foreach (var person in Peeplist)
+            if (txtCustomerFirstName.Text == "" || txtCustomerLastName.Text == "" || txtCustomerPhoneNumber.Text == "")
             {
-                listBox1.Items.Add(person);
+                MessageBox.Show("Fyll i all information!");
             }
-
-            txtClear();
-
+            else
+            {
+                Peeplist.Add(new Customer() { FirstName = txtCustomerFirstName.Text, LastName = txtCustomerLastName.Text, CustomerId = CustomerCounter, PhoneNumber = txtCustomerPhoneNumber.Text });
+                WriteListBox();
+                txtClear();
+            }
         }
 
         private void btnEmployeeAdd_Click(object sender, EventArgs e)
         {
-            Peeplist.Add(new Employee() { FirstName = txtEmployeeFirstName.Text, LastName = txtEmployeeLastName.Text, EmployeeId = 1, PhoneNumber = txtEmployeePhoneNumber.Text, Title = txtEmployeeTitle.Text, Wage = txtEmployeeWage.Text  });
-            listBox1.Items.Clear();
-            foreach (var person in Peeplist)
+            if (txtEmployeeFirstName.Text == "" || txtEmployeeLastName.Text == "" || txtEmployeePhoneNumber.Text == "" || txtEmployeeTitle.Text == "" || txtEmployeeWage.Text == "")
             {
-                listBox1.Items.Add(person);
+                MessageBox.Show("Fyll i all information!");
             }
-
-            txtClear();
+            else
+            {
+                Peeplist.Add(new Employee() { FirstName = txtEmployeeFirstName.Text, LastName = txtEmployeeLastName.Text, EmployeeId = EmployeeCounter, PhoneNumber = txtEmployeePhoneNumber.Text, Title = txtEmployeeTitle.Text, Wage = txtEmployeeWage.Text });
+                WriteListBox();
+                txtClear();
+            }
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Peeplist.Add(new Supplier() { FirstName = txtSupplierFirstName.Text, LastName = txtSupplierLastName.Text, PhoneNumber = txtSupplierPhoneNumber.Text, Company = txtCompanyName.Text });
-            listBox1.Items.Clear();
-            foreach (var person in Peeplist)
+            if (txtSupplierFirstName.Text == "" || txtSupplierLastName.Text == "" || txtSupplierPhoneNumber.Text == "" || txtCompanyName.Text == "")
             {
-                listBox1.Items.Add(person);
+                MessageBox.Show("Fyll i all information!");
             }
 
-            txtClear();
+            else
+            {
+                Peeplist.Add(new Supplier() { FirstName = txtSupplierFirstName.Text, LastName = txtSupplierLastName.Text, PhoneNumber = txtSupplierPhoneNumber.Text, Company = txtCompanyName.Text });
+                WriteListBox();
+                txtClear();
+            }
 
         }
 
@@ -187,6 +194,7 @@ namespace People
             x.LastName = txtLastNameEdit.Text;
             x.PhoneNumber = txtNumberEdit.Text;
             hidePanels();
+            WriteListBox();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -209,6 +217,7 @@ namespace People
             E.Title = txtEmployeeTitleEdit.Text;
             E.Wage = txtEmployeeWageEdit.Text;
             hidePanels();
+            WriteListBox();
         }
 
         private void btnEmployeeEditCancel_Click(object sender, EventArgs e)
@@ -258,12 +267,63 @@ namespace People
             S.Company = txtSupplierNameEdit.Text;
             hidePanels();
             txtClear();
+            WriteListBox();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             hidePanels();
             txtClear();
+        }
+
+        public void WriteListBox()
+        {
+
+            CustomerCounter = 0;
+            EmployeeCounter = 0;
+            SupplierCounter = 0;
+
+            listBox1.Items.Clear();
+            listBox1.Items.Add("Customers");
+            foreach (Peeps item in Peeplist)
+            {
+                if (item is Customer)
+                {
+                    listBox1.Items.Add(item);
+                    CustomerCounter++;
+                }
+            }
+
+            listBox1.Items.Add(string.Empty);
+            listBox1.Items.Add("\nEmployees");
+
+            foreach (Peeps item in Peeplist)
+            {
+                if (item is Employee)
+                {
+                    listBox1.Items.Add(item);
+                    EmployeeCounter++;
+                }
+            }
+
+            listBox1.Items.Add(string.Empty);
+            listBox1.Items.Add("\nSuppliers");
+
+            foreach (Peeps item in Peeplist)
+            {
+                if (item is Supplier)
+                {
+                    listBox1.Items.Add(item);
+                    SupplierCounter++;
+                }
+
+                lblCounter.Text = string.Format("Det finns {0} Kunder, {1} Anställda och {2} Leverantörer registrerade!", CustomerCounter, EmployeeCounter, SupplierCounter);
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

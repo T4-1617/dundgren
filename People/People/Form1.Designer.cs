@@ -29,19 +29,23 @@
         private void InitializeComponent()
         {
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblCounter = new System.Windows.Forms.Label();
             this.pnlCustomer = new System.Windows.Forms.Panel();
+            this.txtCustomerPhoneNumber = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblCustomerLastName = new System.Windows.Forms.Label();
+            this.txtCustomerLastName = new System.Windows.Forms.TextBox();
+            this.lblCustomerFirstName = new System.Windows.Forms.Label();
+            this.txtCustomerFirstName = new System.Windows.Forms.TextBox();
             this.btnCustomerAdd = new System.Windows.Forms.Button();
             this.btnCustomerCancel = new System.Windows.Forms.Button();
             this.ComboPeople = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtCustomerFirstName = new System.Windows.Forms.TextBox();
-            this.lblCustomerFirstName = new System.Windows.Forms.Label();
-            this.txtCustomerLastName = new System.Windows.Forms.TextBox();
-            this.lblCustomerLastName = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtCustomerPhoneNumber = new System.Windows.Forms.TextBox();
             this.pnlEmployee = new System.Windows.Forms.Panel();
+            this.txtCustomerWage = new System.Windows.Forms.Label();
+            this.txtEmployeeWage = new System.Windows.Forms.TextBox();
+            this.txtEmployeeTitle = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.txtEmployeePhoneNumber = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,6 +55,9 @@
             this.btnEmployeeAdd = new System.Windows.Forms.Button();
             this.btnEmployeeCancel = new System.Windows.Forms.Button();
             this.pnlSupplier = new System.Windows.Forms.Panel();
+            this.txtCompanyName = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.txtSupplierPhoneNumber = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -59,13 +66,6 @@
             this.txtSupplierFirstName = new System.Windows.Forms.TextBox();
             this.btnSupplierAdd = new System.Windows.Forms.Button();
             this.btnSupplierCancel = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtEmployeeTitle = new System.Windows.Forms.TextBox();
-            this.txtEmployeeWage = new System.Windows.Forms.TextBox();
-            this.txtCustomerWage = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtCompanyName = new System.Windows.Forms.TextBox();
             this.txtNumberEdit = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -73,30 +73,32 @@
             this.label15 = new System.Windows.Forms.Label();
             this.txtFirstNameEdit = new System.Windows.Forms.TextBox();
             this.pnlEdit = new System.Windows.Forms.Panel();
-            this.btnSave2 = new System.Windows.Forms.Button();
-            this.btnCancel2 = new System.Windows.Forms.Button();
-            this.pnlCustomerEdit = new System.Windows.Forms.Panel();
-            this.btnCustomerSave = new System.Windows.Forms.Button();
             this.btnCustomerEditCancel = new System.Windows.Forms.Button();
+            this.btnCustomerSave = new System.Windows.Forms.Button();
             this.pnlEmployeeEdit = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.txtEmployeeTitleEdit = new System.Windows.Forms.TextBox();
-            this.txtEmployeeWageEdit = new System.Windows.Forms.TextBox();
-            this.btnEmployeeSave = new System.Windows.Forms.Button();
             this.btnEmployeeEditCancel = new System.Windows.Forms.Button();
+            this.btnEmployeeSave = new System.Windows.Forms.Button();
+            this.txtEmployeeWageEdit = new System.Windows.Forms.TextBox();
+            this.txtEmployeeTitleEdit = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.pnlSupplierEdit = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.txtSupplierNameEdit = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
+            this.txtEmployeeId = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pnlCustomerEdit = new System.Windows.Forms.Panel();
+            this.txtCustomerId = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.pnlCustomer.SuspendLayout();
             this.pnlEmployee.SuspendLayout();
             this.pnlSupplier.SuspendLayout();
             this.pnlEdit.SuspendLayout();
-            this.pnlCustomerEdit.SuspendLayout();
             this.pnlEmployeeEdit.SuspendLayout();
             this.pnlSupplierEdit.SuspendLayout();
+            this.pnlCustomerEdit.SuspendLayout();
             this.SuspendLayout();
             // 
             // listBox1
@@ -108,14 +110,14 @@
             this.listBox1.TabIndex = 10;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
-            // label2
+            // lblCounter
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 170);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "label2";
+            this.lblCounter.AutoSize = true;
+            this.lblCounter.Location = new System.Drawing.Point(23, 170);
+            this.lblCounter.Name = "lblCounter";
+            this.lblCounter.Size = new System.Drawing.Size(35, 13);
+            this.lblCounter.TabIndex = 9;
+            this.lblCounter.Text = "label2";
             // 
             // pnlCustomer
             // 
@@ -131,6 +133,54 @@
             this.pnlCustomer.Name = "pnlCustomer";
             this.pnlCustomer.Size = new System.Drawing.Size(427, 134);
             this.pnlCustomer.TabIndex = 8;
+            // 
+            // txtCustomerPhoneNumber
+            // 
+            this.txtCustomerPhoneNumber.Location = new System.Drawing.Point(259, 5);
+            this.txtCustomerPhoneNumber.Name = "txtCustomerPhoneNumber";
+            this.txtCustomerPhoneNumber.Size = new System.Drawing.Size(100, 20);
+            this.txtCustomerPhoneNumber.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(170, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "TelefonNummer";
+            // 
+            // lblCustomerLastName
+            // 
+            this.lblCustomerLastName.AutoSize = true;
+            this.lblCustomerLastName.Location = new System.Drawing.Point(3, 36);
+            this.lblCustomerLastName.Name = "lblCustomerLastName";
+            this.lblCustomerLastName.Size = new System.Drawing.Size(55, 13);
+            this.lblCustomerLastName.TabIndex = 5;
+            this.lblCustomerLastName.Text = "Efternamn";
+            // 
+            // txtCustomerLastName
+            // 
+            this.txtCustomerLastName.Location = new System.Drawing.Point(58, 33);
+            this.txtCustomerLastName.Name = "txtCustomerLastName";
+            this.txtCustomerLastName.Size = new System.Drawing.Size(100, 20);
+            this.txtCustomerLastName.TabIndex = 4;
+            // 
+            // lblCustomerFirstName
+            // 
+            this.lblCustomerFirstName.AutoSize = true;
+            this.lblCustomerFirstName.Location = new System.Drawing.Point(4, 9);
+            this.lblCustomerFirstName.Name = "lblCustomerFirstName";
+            this.lblCustomerFirstName.Size = new System.Drawing.Size(48, 13);
+            this.lblCustomerFirstName.TabIndex = 3;
+            this.lblCustomerFirstName.Text = "Förnamn";
+            // 
+            // txtCustomerFirstName
+            // 
+            this.txtCustomerFirstName.Location = new System.Drawing.Point(58, 6);
+            this.txtCustomerFirstName.Name = "txtCustomerFirstName";
+            this.txtCustomerFirstName.Size = new System.Drawing.Size(100, 20);
+            this.txtCustomerFirstName.TabIndex = 2;
             // 
             // btnCustomerAdd
             // 
@@ -174,54 +224,6 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Jag vill registrera en ny:";
             // 
-            // txtCustomerFirstName
-            // 
-            this.txtCustomerFirstName.Location = new System.Drawing.Point(58, 6);
-            this.txtCustomerFirstName.Name = "txtCustomerFirstName";
-            this.txtCustomerFirstName.Size = new System.Drawing.Size(100, 20);
-            this.txtCustomerFirstName.TabIndex = 2;
-            // 
-            // lblCustomerFirstName
-            // 
-            this.lblCustomerFirstName.AutoSize = true;
-            this.lblCustomerFirstName.Location = new System.Drawing.Point(4, 9);
-            this.lblCustomerFirstName.Name = "lblCustomerFirstName";
-            this.lblCustomerFirstName.Size = new System.Drawing.Size(48, 13);
-            this.lblCustomerFirstName.TabIndex = 3;
-            this.lblCustomerFirstName.Text = "Förnamn";
-            // 
-            // txtCustomerLastName
-            // 
-            this.txtCustomerLastName.Location = new System.Drawing.Point(58, 33);
-            this.txtCustomerLastName.Name = "txtCustomerLastName";
-            this.txtCustomerLastName.Size = new System.Drawing.Size(100, 20);
-            this.txtCustomerLastName.TabIndex = 4;
-            // 
-            // lblCustomerLastName
-            // 
-            this.lblCustomerLastName.AutoSize = true;
-            this.lblCustomerLastName.Location = new System.Drawing.Point(3, 36);
-            this.lblCustomerLastName.Name = "lblCustomerLastName";
-            this.lblCustomerLastName.Size = new System.Drawing.Size(55, 13);
-            this.lblCustomerLastName.TabIndex = 5;
-            this.lblCustomerLastName.Text = "Efternamn";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(170, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "TelefonNummer";
-            // 
-            // txtCustomerPhoneNumber
-            // 
-            this.txtCustomerPhoneNumber.Location = new System.Drawing.Point(259, 5);
-            this.txtCustomerPhoneNumber.Name = "txtCustomerPhoneNumber";
-            this.txtCustomerPhoneNumber.Size = new System.Drawing.Size(100, 20);
-            this.txtCustomerPhoneNumber.TabIndex = 7;
-            // 
             // pnlEmployee
             // 
             this.pnlEmployee.Controls.Add(this.txtCustomerWage);
@@ -236,10 +238,42 @@
             this.pnlEmployee.Controls.Add(this.txtEmployeeFirstName);
             this.pnlEmployee.Controls.Add(this.btnEmployeeAdd);
             this.pnlEmployee.Controls.Add(this.btnEmployeeCancel);
-            this.pnlEmployee.Location = new System.Drawing.Point(448, 33);
+            this.pnlEmployee.Location = new System.Drawing.Point(15, 33);
             this.pnlEmployee.Name = "pnlEmployee";
             this.pnlEmployee.Size = new System.Drawing.Size(427, 134);
             this.pnlEmployee.TabIndex = 9;
+            // 
+            // txtCustomerWage
+            // 
+            this.txtCustomerWage.AutoSize = true;
+            this.txtCustomerWage.Location = new System.Drawing.Point(11, 89);
+            this.txtCustomerWage.Name = "txtCustomerWage";
+            this.txtCustomerWage.Size = new System.Drawing.Size(25, 13);
+            this.txtCustomerWage.TabIndex = 11;
+            this.txtCustomerWage.Text = "Lön";
+            // 
+            // txtEmployeeWage
+            // 
+            this.txtEmployeeWage.Location = new System.Drawing.Point(58, 86);
+            this.txtEmployeeWage.Name = "txtEmployeeWage";
+            this.txtEmployeeWage.Size = new System.Drawing.Size(100, 20);
+            this.txtEmployeeWage.TabIndex = 10;
+            // 
+            // txtEmployeeTitle
+            // 
+            this.txtEmployeeTitle.Location = new System.Drawing.Point(58, 60);
+            this.txtEmployeeTitle.Name = "txtEmployeeTitle";
+            this.txtEmployeeTitle.Size = new System.Drawing.Size(100, 20);
+            this.txtEmployeeTitle.TabIndex = 9;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(13, 63);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(27, 13);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "Titel";
             // 
             // txtEmployeePhoneNumber
             // 
@@ -322,10 +356,35 @@
             this.pnlSupplier.Controls.Add(this.txtSupplierFirstName);
             this.pnlSupplier.Controls.Add(this.btnSupplierAdd);
             this.pnlSupplier.Controls.Add(this.btnSupplierCancel);
-            this.pnlSupplier.Location = new System.Drawing.Point(881, 33);
+            this.pnlSupplier.Location = new System.Drawing.Point(15, 33);
             this.pnlSupplier.Name = "pnlSupplier";
             this.pnlSupplier.Size = new System.Drawing.Size(427, 134);
             this.pnlSupplier.TabIndex = 9;
+            // 
+            // txtCompanyName
+            // 
+            this.txtCompanyName.Location = new System.Drawing.Point(226, 18);
+            this.txtCompanyName.Name = "txtCompanyName";
+            this.txtCompanyName.Size = new System.Drawing.Size(100, 20);
+            this.txtCompanyName.TabIndex = 10;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(177, 21);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(43, 13);
+            this.label12.TabIndex = 9;
+            this.label12.Text = "Företag";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(55, 3);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(76, 13);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Kontaktperson";
             // 
             // txtSupplierPhoneNumber
             // 
@@ -395,63 +454,6 @@
             this.btnSupplierCancel.UseVisualStyleBackColor = true;
             this.btnSupplierCancel.Click += new System.EventHandler(this.btnSupplierCancel_Click);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(55, 3);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(76, 13);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "Kontaktperson";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(13, 63);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(27, 13);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "Titel";
-            // 
-            // txtEmployeeTitle
-            // 
-            this.txtEmployeeTitle.Location = new System.Drawing.Point(58, 60);
-            this.txtEmployeeTitle.Name = "txtEmployeeTitle";
-            this.txtEmployeeTitle.Size = new System.Drawing.Size(100, 20);
-            this.txtEmployeeTitle.TabIndex = 9;
-            // 
-            // txtEmployeeWage
-            // 
-            this.txtEmployeeWage.Location = new System.Drawing.Point(58, 86);
-            this.txtEmployeeWage.Name = "txtEmployeeWage";
-            this.txtEmployeeWage.Size = new System.Drawing.Size(100, 20);
-            this.txtEmployeeWage.TabIndex = 10;
-            // 
-            // txtCustomerWage
-            // 
-            this.txtCustomerWage.AutoSize = true;
-            this.txtCustomerWage.Location = new System.Drawing.Point(11, 89);
-            this.txtCustomerWage.Name = "txtCustomerWage";
-            this.txtCustomerWage.Size = new System.Drawing.Size(25, 13);
-            this.txtCustomerWage.TabIndex = 11;
-            this.txtCustomerWage.Text = "Lön";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(177, 21);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(43, 13);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "Företag";
-            // 
-            // txtCompanyName
-            // 
-            this.txtCompanyName.Location = new System.Drawing.Point(226, 18);
-            this.txtCompanyName.Name = "txtCompanyName";
-            this.txtCompanyName.Size = new System.Drawing.Size(100, 20);
-            this.txtCompanyName.TabIndex = 10;
-            // 
             // txtNumberEdit
             // 
             this.txtNumberEdit.Location = new System.Drawing.Point(60, 59);
@@ -505,57 +507,17 @@
             this.pnlEdit.Controls.Add(this.label15);
             this.pnlEdit.Controls.Add(this.txtNumberEdit);
             this.pnlEdit.Controls.Add(this.txtFirstNameEdit);
-            this.pnlEdit.Controls.Add(this.pnlCustomerEdit);
             this.pnlEdit.Controls.Add(this.txtLastNameEdit);
             this.pnlEdit.Controls.Add(this.label14);
             this.pnlEdit.Controls.Add(this.label13);
             this.pnlEdit.Location = new System.Drawing.Point(182, 186);
             this.pnlEdit.Name = "pnlEdit";
-            this.pnlEdit.Size = new System.Drawing.Size(254, 105);
+            this.pnlEdit.Size = new System.Drawing.Size(254, 81);
             this.pnlEdit.TabIndex = 14;
-            // 
-            // btnSave2
-            // 
-            this.btnSave2.Location = new System.Drawing.Point(95, 186);
-            this.btnSave2.Name = "btnSave2";
-            this.btnSave2.Size = new System.Drawing.Size(75, 23);
-            this.btnSave2.TabIndex = 2;
-            this.btnSave2.Text = "Save";
-            this.btnSave2.UseVisualStyleBackColor = true;
-            // 
-            // btnCancel2
-            // 
-            this.btnCancel2.Location = new System.Drawing.Point(176, 186);
-            this.btnCancel2.Name = "btnCancel2";
-            this.btnCancel2.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel2.TabIndex = 2;
-            this.btnCancel2.Text = "Cancel";
-            this.btnCancel2.UseVisualStyleBackColor = true;
-            // 
-            // pnlCustomerEdit
-            // 
-            this.pnlCustomerEdit.Controls.Add(this.btnCustomerEditCancel);
-            this.pnlCustomerEdit.Controls.Add(this.btnCustomerSave);
-            this.pnlCustomerEdit.Controls.Add(this.btnCancel2);
-            this.pnlCustomerEdit.Controls.Add(this.btnSave2);
-            this.pnlCustomerEdit.Location = new System.Drawing.Point(60, 70);
-            this.pnlCustomerEdit.Name = "pnlCustomerEdit";
-            this.pnlCustomerEdit.Size = new System.Drawing.Size(160, 47);
-            this.pnlCustomerEdit.TabIndex = 11;
-            // 
-            // btnCustomerSave
-            // 
-            this.btnCustomerSave.Location = new System.Drawing.Point(0, 12);
-            this.btnCustomerSave.Name = "btnCustomerSave";
-            this.btnCustomerSave.Size = new System.Drawing.Size(75, 23);
-            this.btnCustomerSave.TabIndex = 3;
-            this.btnCustomerSave.Text = "Save";
-            this.btnCustomerSave.UseVisualStyleBackColor = true;
-            this.btnCustomerSave.Click += new System.EventHandler(this.btnCustomerSave_Click);
             // 
             // btnCustomerEditCancel
             // 
-            this.btnCustomerEditCancel.Location = new System.Drawing.Point(81, 12);
+            this.btnCustomerEditCancel.Location = new System.Drawing.Point(176, 27);
             this.btnCustomerEditCancel.Name = "btnCustomerEditCancel";
             this.btnCustomerEditCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCustomerEditCancel.TabIndex = 4;
@@ -563,27 +525,64 @@
             this.btnCustomerEditCancel.UseVisualStyleBackColor = true;
             this.btnCustomerEditCancel.Click += new System.EventHandler(this.btnCustomerEditCancel_Click);
             // 
+            // btnCustomerSave
+            // 
+            this.btnCustomerSave.Location = new System.Drawing.Point(95, 27);
+            this.btnCustomerSave.Name = "btnCustomerSave";
+            this.btnCustomerSave.Size = new System.Drawing.Size(75, 23);
+            this.btnCustomerSave.TabIndex = 3;
+            this.btnCustomerSave.Text = "Save";
+            this.btnCustomerSave.UseVisualStyleBackColor = true;
+            this.btnCustomerSave.Click += new System.EventHandler(this.btnCustomerSave_Click);
+            // 
             // pnlEmployeeEdit
             // 
+            this.pnlEmployeeEdit.Controls.Add(this.label2);
+            this.pnlEmployeeEdit.Controls.Add(this.txtEmployeeId);
             this.pnlEmployeeEdit.Controls.Add(this.btnEmployeeEditCancel);
             this.pnlEmployeeEdit.Controls.Add(this.btnEmployeeSave);
             this.pnlEmployeeEdit.Controls.Add(this.txtEmployeeWageEdit);
             this.pnlEmployeeEdit.Controls.Add(this.txtEmployeeTitleEdit);
             this.pnlEmployeeEdit.Controls.Add(this.label17);
             this.pnlEmployeeEdit.Controls.Add(this.label16);
-            this.pnlEmployeeEdit.Location = new System.Drawing.Point(448, 186);
+            this.pnlEmployeeEdit.Location = new System.Drawing.Point(182, 265);
             this.pnlEmployeeEdit.Name = "pnlEmployeeEdit";
-            this.pnlEmployeeEdit.Size = new System.Drawing.Size(200, 100);
+            this.pnlEmployeeEdit.Size = new System.Drawing.Size(254, 100);
             this.pnlEmployeeEdit.TabIndex = 15;
             // 
-            // label16
+            // btnEmployeeEditCancel
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(9, 9);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(27, 13);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Title";
+            this.btnEmployeeEditCancel.Location = new System.Drawing.Point(176, 74);
+            this.btnEmployeeEditCancel.Name = "btnEmployeeEditCancel";
+            this.btnEmployeeEditCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnEmployeeEditCancel.TabIndex = 5;
+            this.btnEmployeeEditCancel.Text = "Cancel";
+            this.btnEmployeeEditCancel.UseVisualStyleBackColor = true;
+            this.btnEmployeeEditCancel.Click += new System.EventHandler(this.btnEmployeeEditCancel_Click);
+            // 
+            // btnEmployeeSave
+            // 
+            this.btnEmployeeSave.Location = new System.Drawing.Point(95, 74);
+            this.btnEmployeeSave.Name = "btnEmployeeSave";
+            this.btnEmployeeSave.Size = new System.Drawing.Size(75, 23);
+            this.btnEmployeeSave.TabIndex = 5;
+            this.btnEmployeeSave.Text = "Save";
+            this.btnEmployeeSave.UseVisualStyleBackColor = true;
+            this.btnEmployeeSave.Click += new System.EventHandler(this.btnEmployeeSave_Click);
+            // 
+            // txtEmployeeWageEdit
+            // 
+            this.txtEmployeeWageEdit.Location = new System.Drawing.Point(43, 32);
+            this.txtEmployeeWageEdit.Name = "txtEmployeeWageEdit";
+            this.txtEmployeeWageEdit.Size = new System.Drawing.Size(100, 20);
+            this.txtEmployeeWageEdit.TabIndex = 3;
+            // 
+            // txtEmployeeTitleEdit
+            // 
+            this.txtEmployeeTitleEdit.Location = new System.Drawing.Point(43, 6);
+            this.txtEmployeeTitleEdit.Name = "txtEmployeeTitleEdit";
+            this.txtEmployeeTitleEdit.Size = new System.Drawing.Size(100, 20);
+            this.txtEmployeeTitleEdit.TabIndex = 2;
             // 
             // label17
             // 
@@ -594,39 +593,14 @@
             this.label17.TabIndex = 1;
             this.label17.Text = "Wage";
             // 
-            // txtEmployeeTitleEdit
+            // label16
             // 
-            this.txtEmployeeTitleEdit.Location = new System.Drawing.Point(43, 6);
-            this.txtEmployeeTitleEdit.Name = "txtEmployeeTitleEdit";
-            this.txtEmployeeTitleEdit.Size = new System.Drawing.Size(100, 20);
-            this.txtEmployeeTitleEdit.TabIndex = 2;
-            // 
-            // txtEmployeeWageEdit
-            // 
-            this.txtEmployeeWageEdit.Location = new System.Drawing.Point(43, 32);
-            this.txtEmployeeWageEdit.Name = "txtEmployeeWageEdit";
-            this.txtEmployeeWageEdit.Size = new System.Drawing.Size(100, 20);
-            this.txtEmployeeWageEdit.TabIndex = 3;
-            // 
-            // btnEmployeeSave
-            // 
-            this.btnEmployeeSave.Location = new System.Drawing.Point(43, 77);
-            this.btnEmployeeSave.Name = "btnEmployeeSave";
-            this.btnEmployeeSave.Size = new System.Drawing.Size(75, 23);
-            this.btnEmployeeSave.TabIndex = 5;
-            this.btnEmployeeSave.Text = "Save";
-            this.btnEmployeeSave.UseVisualStyleBackColor = true;
-            this.btnEmployeeSave.Click += new System.EventHandler(this.btnEmployeeSave_Click);
-            // 
-            // btnEmployeeEditCancel
-            // 
-            this.btnEmployeeEditCancel.Location = new System.Drawing.Point(122, 77);
-            this.btnEmployeeEditCancel.Name = "btnEmployeeEditCancel";
-            this.btnEmployeeEditCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnEmployeeEditCancel.TabIndex = 5;
-            this.btnEmployeeEditCancel.Text = "Cancel";
-            this.btnEmployeeEditCancel.UseVisualStyleBackColor = true;
-            this.btnEmployeeEditCancel.Click += new System.EventHandler(this.btnEmployeeEditCancel_Click);
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(9, 9);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(27, 13);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Title";
             // 
             // pnlSupplierEdit
             // 
@@ -634,14 +608,14 @@
             this.pnlSupplierEdit.Controls.Add(this.button2);
             this.pnlSupplierEdit.Controls.Add(this.txtSupplierNameEdit);
             this.pnlSupplierEdit.Controls.Add(this.label19);
-            this.pnlSupplierEdit.Location = new System.Drawing.Point(672, 186);
+            this.pnlSupplierEdit.Location = new System.Drawing.Point(183, 265);
             this.pnlSupplierEdit.Name = "pnlSupplierEdit";
-            this.pnlSupplierEdit.Size = new System.Drawing.Size(200, 53);
+            this.pnlSupplierEdit.Size = new System.Drawing.Size(251, 53);
             this.pnlSupplierEdit.TabIndex = 16;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(122, 29);
+            this.button1.Location = new System.Drawing.Point(173, 27);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 5;
@@ -651,7 +625,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(43, 29);
+            this.button2.Location = new System.Drawing.Point(92, 27);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 5;
@@ -676,23 +650,70 @@
             this.label19.TabIndex = 0;
             this.label19.Text = "Företag";
             // 
+            // txtEmployeeId
+            // 
+            this.txtEmployeeId.Location = new System.Drawing.Point(43, 55);
+            this.txtEmployeeId.Name = "txtEmployeeId";
+            this.txtEmployeeId.ReadOnly = true;
+            this.txtEmployeeId.Size = new System.Drawing.Size(100, 20);
+            this.txtEmployeeId.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(16, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Id";
+            // 
+            // pnlCustomerEdit
+            // 
+            this.pnlCustomerEdit.Controls.Add(this.label18);
+            this.pnlCustomerEdit.Controls.Add(this.btnCustomerEditCancel);
+            this.pnlCustomerEdit.Controls.Add(this.txtCustomerId);
+            this.pnlCustomerEdit.Controls.Add(this.btnCustomerSave);
+            this.pnlCustomerEdit.Location = new System.Drawing.Point(182, 265);
+            this.pnlCustomerEdit.Name = "pnlCustomerEdit";
+            this.pnlCustomerEdit.Size = new System.Drawing.Size(254, 53);
+            this.pnlCustomerEdit.TabIndex = 17;
+            // 
+            // txtCustomerId
+            // 
+            this.txtCustomerId.Location = new System.Drawing.Point(60, 6);
+            this.txtCustomerId.Name = "txtCustomerId";
+            this.txtCustomerId.ReadOnly = true;
+            this.txtCustomerId.Size = new System.Drawing.Size(100, 20);
+            this.txtCustomerId.TabIndex = 2;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(21, 9);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(16, 13);
+            this.label18.TabIndex = 5;
+            this.label18.Text = "Id";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1398, 407);
+            this.ClientSize = new System.Drawing.Size(450, 407);
+            this.Controls.Add(this.pnlCustomerEdit);
             this.Controls.Add(this.pnlSupplierEdit);
             this.Controls.Add(this.pnlEmployeeEdit);
             this.Controls.Add(this.pnlEdit);
             this.Controls.Add(this.pnlSupplier);
             this.Controls.Add(this.pnlEmployee);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblCounter);
             this.Controls.Add(this.pnlCustomer);
             this.Controls.Add(this.ComboPeople);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.pnlCustomer.ResumeLayout(false);
             this.pnlCustomer.PerformLayout();
             this.pnlEmployee.ResumeLayout(false);
@@ -701,11 +722,12 @@
             this.pnlSupplier.PerformLayout();
             this.pnlEdit.ResumeLayout(false);
             this.pnlEdit.PerformLayout();
-            this.pnlCustomerEdit.ResumeLayout(false);
             this.pnlEmployeeEdit.ResumeLayout(false);
             this.pnlEmployeeEdit.PerformLayout();
             this.pnlSupplierEdit.ResumeLayout(false);
             this.pnlSupplierEdit.PerformLayout();
+            this.pnlCustomerEdit.ResumeLayout(false);
+            this.pnlCustomerEdit.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -713,7 +735,7 @@
 
         #endregion
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCounter;
         private System.Windows.Forms.Panel pnlCustomer;
         private System.Windows.Forms.Button btnCustomerAdd;
         private System.Windows.Forms.Button btnCustomerCancel;
@@ -757,9 +779,6 @@
         private System.Windows.Forms.TextBox txtLastNameEdit;
         private System.Windows.Forms.TextBox txtFirstNameEdit;
         private System.Windows.Forms.Panel pnlEdit;
-        private System.Windows.Forms.Button btnSave2;
-        private System.Windows.Forms.Button btnCancel2;
-        private System.Windows.Forms.Panel pnlCustomerEdit;
         private System.Windows.Forms.Button btnCustomerEditCancel;
         private System.Windows.Forms.Button btnCustomerSave;
         private System.Windows.Forms.Panel pnlEmployeeEdit;
@@ -774,6 +793,11 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtSupplierNameEdit;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txtEmployeeId;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel pnlCustomerEdit;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txtCustomerId;
     }
 }
 
