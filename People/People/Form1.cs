@@ -132,9 +132,7 @@ namespace People
                 listBox1.Items.Add(person);
             }
 
-            txtCustomerFirstName.Clear();
-            txtCustomerLastName.Clear();
-            txtCustomerPhoneNumber.Clear();
+            txtClear();
 
         }
 
@@ -147,11 +145,7 @@ namespace People
                 listBox1.Items.Add(person);
             }
 
-            txtEmployeeFirstName.Clear();
-            txtEmployeeLastName.Clear();
-            txtEmployeePhoneNumber.Clear();
-            txtEmployeeTitle.Clear();
-            txtEmployeeWage.Clear();
+            txtClear();
 
         }
 
@@ -164,38 +158,26 @@ namespace People
                 listBox1.Items.Add(person);
             }
 
-            txtCompanyName.Clear();
-            txtSupplierFirstName.Clear();
-            txtSupplierLastName.Clear();
-            txtSupplierPhoneNumber.Clear();
+            txtClear();
 
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            pnlCustomer.Visible = false;
-            txtCustomerFirstName.Clear();
-            txtCustomerLastName.Clear();
-            txtCustomerPhoneNumber.Clear();
+            hidePanels();
+            txtClear();
         }
 
         private void btnEmployeeCancel_Click(object sender, EventArgs e)
         {
-            pnlEmployee.Visible = false;
-            txtEmployeeFirstName.Clear();
-            txtEmployeeLastName.Clear();
-            txtEmployeePhoneNumber.Clear();
-            txtEmployeeTitle.Clear();
-            txtEmployeeWage.Clear();
+            txtClear();
+            hidePanels();
         }
 
         private void btnSupplierCancel_Click(object sender, EventArgs e)
         {
-            pnlSupplier.Visible = false;
-            txtCompanyName.Clear();
-            txtSupplierFirstName.Clear();
-            txtSupplierLastName.Clear();
-            txtSupplierPhoneNumber.Clear();
+            txtClear();
+            hidePanels();
         }
 
         private void btnCustomerSave_Click(object sender, EventArgs e)
@@ -204,8 +186,7 @@ namespace People
             x.FirstName = txtFirstNameEdit.Text;
             x.LastName = txtLastNameEdit.Text;
             x.PhoneNumber = txtNumberEdit.Text;
-            pnlEdit.Visible = false;
-            pnlCustomerEdit.Visible = false;
+            hidePanels();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -215,12 +196,8 @@ namespace People
 
         private void btnCustomerEditCancel_Click(object sender, EventArgs e)
         {
-            pnlEdit.Visible = false;
-            pnlCustomerEdit.Visible = false;
-            txtFirstNameEdit.Clear();
-            txtLastNameEdit.Clear();
-            txtNumberEdit.Clear();
-
+            hidePanels();
+            txtClear();
         }
 
         private void btnEmployeeSave_Click(object sender, EventArgs e)
@@ -231,19 +208,13 @@ namespace People
             E.PhoneNumber = txtNumberEdit.Text;
             E.Title = txtEmployeeTitleEdit.Text;
             E.Wage = txtEmployeeWageEdit.Text;
-            pnlEdit.Visible = false;
-            pnlEmployeeEdit.Visible = false;
+            hidePanels();
         }
 
         private void btnEmployeeEditCancel_Click(object sender, EventArgs e)
         {
-            pnlEdit.Visible = false;
-            pnlCustomerEdit.Visible = false;
-            txtFirstNameEdit.Clear();
-            txtLastNameEdit.Clear();
-            txtNumberEdit.Clear();
-            txtEmployeeWageEdit.Clear();
-            txtEmployeeTitleEdit.Clear();
+            hidePanels();
+            txtClear();
         }
 
         public void txtClear() {
@@ -252,7 +223,47 @@ namespace People
             txtNumberEdit.Clear();
             txtEmployeeWageEdit.Clear();
             txtEmployeeTitleEdit.Clear();
-            
+            txtSupplierNameEdit.Clear();
+            txtCustomerFirstName.Clear();
+            txtCustomerLastName.Clear();
+            txtCustomerPhoneNumber.Clear();
+            txtCompanyName.Clear();
+            txtSupplierFirstName.Clear();
+            txtSupplierLastName.Clear();
+            txtSupplierPhoneNumber.Clear();
+            txtEmployeeFirstName.Clear();
+            txtEmployeeLastName.Clear();
+            txtEmployeePhoneNumber.Clear();
+            txtEmployeeTitle.Clear();
+            txtEmployeeWage.Clear();
+            txtCustomerFirstName.Clear();
+            txtCustomerLastName.Clear();
+            txtCustomerPhoneNumber.Clear();
+        }
+
+        public void hidePanels() {
+            pnlCustomerEdit.Visible = false;
+            pnlEmployeeEdit.Visible = false;
+            pnlSupplierEdit.Visible = false;
+            pnlEdit.Visible = false;
+            pnlCustomer.Visible = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Supplier S = (Supplier)listBox1.SelectedItem;
+            S.FirstName = txtFirstNameEdit.Text;
+            S.LastName = txtLastNameEdit.Text;
+            S.PhoneNumber = txtNumberEdit.Text;
+            S.Company = txtSupplierNameEdit.Text;
+            hidePanels();
+            txtClear();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            hidePanels();
+            txtClear();
         }
     }
 }
