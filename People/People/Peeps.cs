@@ -10,7 +10,7 @@ namespace People
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public long PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
 
         public override string ToString()
         {
