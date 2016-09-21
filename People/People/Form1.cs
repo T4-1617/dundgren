@@ -30,6 +30,10 @@ namespace People
             pnlCustomer.Visible = false;
             pnlEmployee.Visible = false;
             pnlSupplier.Visible = false;
+            pnlCustomerEdit.Visible = false;
+            pnlEdit.Visible = false;
+            pnlEmployeeEdit.Visible = false;
+            pnlSupplierEdit.Visible = false;
 
 
             foreach (var person in Peeplist)
@@ -43,7 +47,48 @@ namespace People
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            Peeps x = (Peeps)listBox1.SelectedItem;
+            txtFirstNameEdit.Text = x.FirstName;
+            txtLastNameEdit.Text = x.LastName;
+            txtNumberEdit.Text = x.PhoneNumber;
+
+
+            switch (listBox1.SelectedItem.GetType().Name)
+            {
+                case "Customer":
+                    pnlEdit.Visible = true;
+                    pnlCustomerEdit.Visible = true;
+                    pnlEmployeeEdit.Visible = false;
+                    pnlSupplierEdit.Visible = false;
+                    break;
+
+                case "Employee":
+                    Employee E = (Employee)listBox1.SelectedItem;
+                    pnlEdit.Visible = true;
+                    pnlCustomerEdit.Visible = false;
+                    pnlEmployeeEdit.Visible = true;
+                    pnlSupplierEdit.Visible = false;
+                    txtEmployeeTitleEdit.Text = E.Title;
+                    txtEmployeeWageEdit.Text = E.Wage;
+                    break;
+
+                case "Supplier":
+                    Supplier S = (Supplier)listBox1.SelectedItem;
+                    pnlSupplierEdit.Visible = true;
+                    pnlCustomerEdit.Visible = false;
+                    pnlEmployeeEdit.Visible = false;
+                    pnlEdit.Visible = true;
+                    txtSupplierNameEdit.Text = S.Company;
+                    break;
+
+
+                default:
+                    pnlCustomerEdit.Visible = false;
+                    pnlEmployeeEdit.Visible = false;
+                    pnlEdit.Visible = false;
+                    pnlSupplierEdit.Visible = false;
+                    break;
+            }
         }
 
         private void ComboPeople_SelectedIndexChanged(object sender, EventArgs e)
@@ -151,6 +196,63 @@ namespace People
             txtSupplierFirstName.Clear();
             txtSupplierLastName.Clear();
             txtSupplierPhoneNumber.Clear();
+        }
+
+        private void btnCustomerSave_Click(object sender, EventArgs e)
+        {
+            Peeps x = (Peeps)listBox1.SelectedItem;
+            x.FirstName = txtFirstNameEdit.Text;
+            x.LastName = txtLastNameEdit.Text;
+            x.PhoneNumber = txtNumberEdit.Text;
+            pnlEdit.Visible = false;
+            pnlCustomerEdit.Visible = false;
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCustomerEditCancel_Click(object sender, EventArgs e)
+        {
+            pnlEdit.Visible = false;
+            pnlCustomerEdit.Visible = false;
+            txtFirstNameEdit.Clear();
+            txtLastNameEdit.Clear();
+            txtNumberEdit.Clear();
+
+        }
+
+        private void btnEmployeeSave_Click(object sender, EventArgs e)
+        {
+            Employee E = (Employee)listBox1.SelectedItem;
+            E.FirstName = txtFirstNameEdit.Text;
+            E.LastName = txtLastNameEdit.Text;
+            E.PhoneNumber = txtNumberEdit.Text;
+            E.Title = txtEmployeeTitleEdit.Text;
+            E.Wage = txtEmployeeWageEdit.Text;
+            pnlEdit.Visible = false;
+            pnlEmployeeEdit.Visible = false;
+        }
+
+        private void btnEmployeeEditCancel_Click(object sender, EventArgs e)
+        {
+            pnlEdit.Visible = false;
+            pnlCustomerEdit.Visible = false;
+            txtFirstNameEdit.Clear();
+            txtLastNameEdit.Clear();
+            txtNumberEdit.Clear();
+            txtEmployeeWageEdit.Clear();
+            txtEmployeeTitleEdit.Clear();
+        }
+
+        public void txtClear() {
+            txtFirstNameEdit.Clear();
+            txtLastNameEdit.Clear();
+            txtNumberEdit.Clear();
+            txtEmployeeWageEdit.Clear();
+            txtEmployeeTitleEdit.Clear();
+            
         }
     }
 }

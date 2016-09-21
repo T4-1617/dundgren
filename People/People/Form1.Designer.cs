@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnCancel2 = new System.Windows.Forms.Button();
-            this.btnSave2 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlCustomer = new System.Windows.Forms.Panel();
@@ -69,38 +66,38 @@
             this.txtCustomerWage = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txtCompanyName = new System.Windows.Forms.TextBox();
-            this.panel2.SuspendLayout();
+            this.txtNumberEdit = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtLastNameEdit = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtFirstNameEdit = new System.Windows.Forms.TextBox();
+            this.pnlEdit = new System.Windows.Forms.Panel();
+            this.btnSave2 = new System.Windows.Forms.Button();
+            this.btnCancel2 = new System.Windows.Forms.Button();
+            this.pnlCustomerEdit = new System.Windows.Forms.Panel();
+            this.btnCustomerSave = new System.Windows.Forms.Button();
+            this.btnCustomerEditCancel = new System.Windows.Forms.Button();
+            this.pnlEmployeeEdit = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtEmployeeTitleEdit = new System.Windows.Forms.TextBox();
+            this.txtEmployeeWageEdit = new System.Windows.Forms.TextBox();
+            this.btnEmployeeSave = new System.Windows.Forms.Button();
+            this.btnEmployeeEditCancel = new System.Windows.Forms.Button();
+            this.pnlSupplierEdit = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.txtSupplierNameEdit = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.pnlCustomer.SuspendLayout();
             this.pnlEmployee.SuspendLayout();
             this.pnlSupplier.SuspendLayout();
+            this.pnlEdit.SuspendLayout();
+            this.pnlCustomerEdit.SuspendLayout();
+            this.pnlEmployeeEdit.SuspendLayout();
+            this.pnlSupplierEdit.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnCancel2);
-            this.panel2.Controls.Add(this.btnSave2);
-            this.panel2.Location = new System.Drawing.Point(188, 186);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(251, 212);
-            this.panel2.TabIndex = 11;
-            // 
-            // btnCancel2
-            // 
-            this.btnCancel2.Location = new System.Drawing.Point(176, 186);
-            this.btnCancel2.Name = "btnCancel2";
-            this.btnCancel2.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel2.TabIndex = 2;
-            this.btnCancel2.Text = "Cancel";
-            this.btnCancel2.UseVisualStyleBackColor = true;
-            // 
-            // btnSave2
-            // 
-            this.btnSave2.Location = new System.Drawing.Point(95, 186);
-            this.btnSave2.Name = "btnSave2";
-            this.btnSave2.Size = new System.Drawing.Size(75, 23);
-            this.btnSave2.TabIndex = 2;
-            this.btnSave2.Text = "Save";
-            this.btnSave2.UseVisualStyleBackColor = true;
             // 
             // listBox1
             // 
@@ -455,14 +452,238 @@
             this.txtCompanyName.Size = new System.Drawing.Size(100, 20);
             this.txtCompanyName.TabIndex = 10;
             // 
+            // txtNumberEdit
+            // 
+            this.txtNumberEdit.Location = new System.Drawing.Point(60, 59);
+            this.txtNumberEdit.Name = "txtNumberEdit";
+            this.txtNumberEdit.Size = new System.Drawing.Size(100, 20);
+            this.txtNumberEdit.TabIndex = 13;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 62);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(54, 13);
+            this.label13.TabIndex = 12;
+            this.label13.Text = "TelefonNr";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(5, 36);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(55, 13);
+            this.label14.TabIndex = 11;
+            this.label14.Text = "Efternamn";
+            // 
+            // txtLastNameEdit
+            // 
+            this.txtLastNameEdit.Location = new System.Drawing.Point(60, 33);
+            this.txtLastNameEdit.Name = "txtLastNameEdit";
+            this.txtLastNameEdit.Size = new System.Drawing.Size(100, 20);
+            this.txtLastNameEdit.TabIndex = 10;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(6, 9);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(48, 13);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "Förnamn";
+            // 
+            // txtFirstNameEdit
+            // 
+            this.txtFirstNameEdit.Location = new System.Drawing.Point(60, 6);
+            this.txtFirstNameEdit.Name = "txtFirstNameEdit";
+            this.txtFirstNameEdit.Size = new System.Drawing.Size(100, 20);
+            this.txtFirstNameEdit.TabIndex = 8;
+            // 
+            // pnlEdit
+            // 
+            this.pnlEdit.Controls.Add(this.label15);
+            this.pnlEdit.Controls.Add(this.txtNumberEdit);
+            this.pnlEdit.Controls.Add(this.txtFirstNameEdit);
+            this.pnlEdit.Controls.Add(this.pnlCustomerEdit);
+            this.pnlEdit.Controls.Add(this.txtLastNameEdit);
+            this.pnlEdit.Controls.Add(this.label14);
+            this.pnlEdit.Controls.Add(this.label13);
+            this.pnlEdit.Location = new System.Drawing.Point(182, 186);
+            this.pnlEdit.Name = "pnlEdit";
+            this.pnlEdit.Size = new System.Drawing.Size(254, 105);
+            this.pnlEdit.TabIndex = 14;
+            // 
+            // btnSave2
+            // 
+            this.btnSave2.Location = new System.Drawing.Point(95, 186);
+            this.btnSave2.Name = "btnSave2";
+            this.btnSave2.Size = new System.Drawing.Size(75, 23);
+            this.btnSave2.TabIndex = 2;
+            this.btnSave2.Text = "Save";
+            this.btnSave2.UseVisualStyleBackColor = true;
+            // 
+            // btnCancel2
+            // 
+            this.btnCancel2.Location = new System.Drawing.Point(176, 186);
+            this.btnCancel2.Name = "btnCancel2";
+            this.btnCancel2.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel2.TabIndex = 2;
+            this.btnCancel2.Text = "Cancel";
+            this.btnCancel2.UseVisualStyleBackColor = true;
+            // 
+            // pnlCustomerEdit
+            // 
+            this.pnlCustomerEdit.Controls.Add(this.btnCustomerEditCancel);
+            this.pnlCustomerEdit.Controls.Add(this.btnCustomerSave);
+            this.pnlCustomerEdit.Controls.Add(this.btnCancel2);
+            this.pnlCustomerEdit.Controls.Add(this.btnSave2);
+            this.pnlCustomerEdit.Location = new System.Drawing.Point(60, 70);
+            this.pnlCustomerEdit.Name = "pnlCustomerEdit";
+            this.pnlCustomerEdit.Size = new System.Drawing.Size(160, 47);
+            this.pnlCustomerEdit.TabIndex = 11;
+            // 
+            // btnCustomerSave
+            // 
+            this.btnCustomerSave.Location = new System.Drawing.Point(0, 12);
+            this.btnCustomerSave.Name = "btnCustomerSave";
+            this.btnCustomerSave.Size = new System.Drawing.Size(75, 23);
+            this.btnCustomerSave.TabIndex = 3;
+            this.btnCustomerSave.Text = "Save";
+            this.btnCustomerSave.UseVisualStyleBackColor = true;
+            this.btnCustomerSave.Click += new System.EventHandler(this.btnCustomerSave_Click);
+            // 
+            // btnCustomerEditCancel
+            // 
+            this.btnCustomerEditCancel.Location = new System.Drawing.Point(81, 12);
+            this.btnCustomerEditCancel.Name = "btnCustomerEditCancel";
+            this.btnCustomerEditCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCustomerEditCancel.TabIndex = 4;
+            this.btnCustomerEditCancel.Text = "Cancel";
+            this.btnCustomerEditCancel.UseVisualStyleBackColor = true;
+            this.btnCustomerEditCancel.Click += new System.EventHandler(this.btnCustomerEditCancel_Click);
+            // 
+            // pnlEmployeeEdit
+            // 
+            this.pnlEmployeeEdit.Controls.Add(this.btnEmployeeEditCancel);
+            this.pnlEmployeeEdit.Controls.Add(this.btnEmployeeSave);
+            this.pnlEmployeeEdit.Controls.Add(this.txtEmployeeWageEdit);
+            this.pnlEmployeeEdit.Controls.Add(this.txtEmployeeTitleEdit);
+            this.pnlEmployeeEdit.Controls.Add(this.label17);
+            this.pnlEmployeeEdit.Controls.Add(this.label16);
+            this.pnlEmployeeEdit.Location = new System.Drawing.Point(448, 186);
+            this.pnlEmployeeEdit.Name = "pnlEmployeeEdit";
+            this.pnlEmployeeEdit.Size = new System.Drawing.Size(200, 100);
+            this.pnlEmployeeEdit.TabIndex = 15;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(9, 9);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(27, 13);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Title";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(4, 35);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(36, 13);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Wage";
+            // 
+            // txtEmployeeTitleEdit
+            // 
+            this.txtEmployeeTitleEdit.Location = new System.Drawing.Point(43, 6);
+            this.txtEmployeeTitleEdit.Name = "txtEmployeeTitleEdit";
+            this.txtEmployeeTitleEdit.Size = new System.Drawing.Size(100, 20);
+            this.txtEmployeeTitleEdit.TabIndex = 2;
+            // 
+            // txtEmployeeWageEdit
+            // 
+            this.txtEmployeeWageEdit.Location = new System.Drawing.Point(43, 32);
+            this.txtEmployeeWageEdit.Name = "txtEmployeeWageEdit";
+            this.txtEmployeeWageEdit.Size = new System.Drawing.Size(100, 20);
+            this.txtEmployeeWageEdit.TabIndex = 3;
+            // 
+            // btnEmployeeSave
+            // 
+            this.btnEmployeeSave.Location = new System.Drawing.Point(43, 77);
+            this.btnEmployeeSave.Name = "btnEmployeeSave";
+            this.btnEmployeeSave.Size = new System.Drawing.Size(75, 23);
+            this.btnEmployeeSave.TabIndex = 5;
+            this.btnEmployeeSave.Text = "Save";
+            this.btnEmployeeSave.UseVisualStyleBackColor = true;
+            this.btnEmployeeSave.Click += new System.EventHandler(this.btnEmployeeSave_Click);
+            // 
+            // btnEmployeeEditCancel
+            // 
+            this.btnEmployeeEditCancel.Location = new System.Drawing.Point(122, 77);
+            this.btnEmployeeEditCancel.Name = "btnEmployeeEditCancel";
+            this.btnEmployeeEditCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnEmployeeEditCancel.TabIndex = 5;
+            this.btnEmployeeEditCancel.Text = "Cancel";
+            this.btnEmployeeEditCancel.UseVisualStyleBackColor = true;
+            this.btnEmployeeEditCancel.Click += new System.EventHandler(this.btnEmployeeEditCancel_Click);
+            // 
+            // pnlSupplierEdit
+            // 
+            this.pnlSupplierEdit.Controls.Add(this.button1);
+            this.pnlSupplierEdit.Controls.Add(this.button2);
+            this.pnlSupplierEdit.Controls.Add(this.txtSupplierNameEdit);
+            this.pnlSupplierEdit.Controls.Add(this.label19);
+            this.pnlSupplierEdit.Location = new System.Drawing.Point(672, 186);
+            this.pnlSupplierEdit.Name = "pnlSupplierEdit";
+            this.pnlSupplierEdit.Size = new System.Drawing.Size(200, 53);
+            this.pnlSupplierEdit.TabIndex = 16;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(122, 29);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Cancel";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(43, 29);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Save";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // txtSupplierNameEdit
+            // 
+            this.txtSupplierNameEdit.Location = new System.Drawing.Point(58, 6);
+            this.txtSupplierNameEdit.Name = "txtSupplierNameEdit";
+            this.txtSupplierNameEdit.Size = new System.Drawing.Size(100, 20);
+            this.txtSupplierNameEdit.TabIndex = 2;
+            this.txtSupplierNameEdit.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(9, 9);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(43, 13);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Företag";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1398, 407);
+            this.Controls.Add(this.pnlSupplierEdit);
+            this.Controls.Add(this.pnlEmployeeEdit);
+            this.Controls.Add(this.pnlEdit);
             this.Controls.Add(this.pnlSupplier);
             this.Controls.Add(this.pnlEmployee);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pnlCustomer);
@@ -470,23 +691,25 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.panel2.ResumeLayout(false);
             this.pnlCustomer.ResumeLayout(false);
             this.pnlCustomer.PerformLayout();
             this.pnlEmployee.ResumeLayout(false);
             this.pnlEmployee.PerformLayout();
             this.pnlSupplier.ResumeLayout(false);
             this.pnlSupplier.PerformLayout();
+            this.pnlEdit.ResumeLayout(false);
+            this.pnlEdit.PerformLayout();
+            this.pnlCustomerEdit.ResumeLayout(false);
+            this.pnlEmployeeEdit.ResumeLayout(false);
+            this.pnlEmployeeEdit.PerformLayout();
+            this.pnlSupplierEdit.ResumeLayout(false);
+            this.pnlSupplierEdit.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnCancel2;
-        private System.Windows.Forms.Button btnSave2;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnlCustomer;
@@ -525,6 +748,30 @@
         private System.Windows.Forms.TextBox txtEmployeeWage;
         private System.Windows.Forms.TextBox txtCompanyName;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtNumberEdit;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtLastNameEdit;
+        private System.Windows.Forms.TextBox txtFirstNameEdit;
+        private System.Windows.Forms.Panel pnlEdit;
+        private System.Windows.Forms.Button btnSave2;
+        private System.Windows.Forms.Button btnCancel2;
+        private System.Windows.Forms.Panel pnlCustomerEdit;
+        private System.Windows.Forms.Button btnCustomerEditCancel;
+        private System.Windows.Forms.Button btnCustomerSave;
+        private System.Windows.Forms.Panel pnlEmployeeEdit;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button btnEmployeeEditCancel;
+        private System.Windows.Forms.Button btnEmployeeSave;
+        private System.Windows.Forms.TextBox txtEmployeeWageEdit;
+        private System.Windows.Forms.TextBox txtEmployeeTitleEdit;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Panel pnlSupplierEdit;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtSupplierNameEdit;
+        private System.Windows.Forms.Label label19;
     }
 }
 
