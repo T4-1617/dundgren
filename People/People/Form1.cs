@@ -39,56 +39,63 @@ namespace People
             pnlSupplierEdit.Visible = false;
 
             WriteListBox();
-           
+
 
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             Peeps x = (Peeps)listBox1.SelectedItem;
-            txtFirstNameEdit.Text = x.FirstName;
-            txtLastNameEdit.Text = x.LastName;
-            txtNumberEdit.Text = x.PhoneNumber;
 
-
-            switch (listBox1.SelectedItem.GetType().Name)
+            //Att göra: kolla att selecteditem TYPE är en peeps, annars avbryt
+            if ( x != null)
             {
-                case "Customer":
-                    Customer C = (Customer)listBox1.SelectedItem;
-                    pnlEdit.Visible = true;
-                    pnlCustomerEdit.Visible = true;
-                    pnlEmployeeEdit.Visible = false;
-                    pnlSupplierEdit.Visible = false;
-                    txtCustomerId.Text = Convert.ToString(C.CustomerId);
-                    break;
-
-                case "Employee":
-                    Employee E = (Employee)listBox1.SelectedItem;
-                    pnlEdit.Visible = true;
-                    pnlCustomerEdit.Visible = false;
-                    pnlEmployeeEdit.Visible = true;
-                    pnlSupplierEdit.Visible = false;
-                    txtEmployeeTitleEdit.Text = E.Title;
-                    txtEmployeeWageEdit.Text = E.Wage;
-                    txtEmployeeId.Text = Convert.ToString(E.EmployeeId);
-                    break;
-
-                case "Supplier":
-                    Supplier S = (Supplier)listBox1.SelectedItem;
-                    pnlSupplierEdit.Visible = true;
-                    pnlCustomerEdit.Visible = false;
-                    pnlEmployeeEdit.Visible = false;
-                    pnlEdit.Visible = true;
-                    txtSupplierNameEdit.Text = S.Company;
-                    break;
+                txtFirstNameEdit.Text = x.FirstName;
+                txtLastNameEdit.Text = x.LastName;
+                txtNumberEdit.Text = x.PhoneNumber;
 
 
-                default:
-                    pnlCustomerEdit.Visible = false;
-                    pnlEmployeeEdit.Visible = false;
-                    pnlEdit.Visible = false;
-                    pnlSupplierEdit.Visible = false;
-                    break;
+                switch (x.GetType().Name)
+                {
+                    case "Customer":
+                        //Alt
+                        Customer C = (Customer)x;
+
+                        pnlEdit.Visible = true;
+                        pnlCustomerEdit.Visible = true;
+                        pnlEmployeeEdit.Visible = false;
+                        pnlSupplierEdit.Visible = false;
+                        txtCustomerId.Text = Convert.ToString(C.CustomerId);
+                        break;
+
+                    case "Employee":
+                        Employee E = (Employee)x;
+                        pnlEdit.Visible = true;
+                        pnlCustomerEdit.Visible = false;
+                        pnlEmployeeEdit.Visible = true;
+                        pnlSupplierEdit.Visible = false;
+                        txtEmployeeTitleEdit.Text = E.Title;
+                        txtEmployeeWageEdit.Text = E.Wage;
+                        txtEmployeeId.Text = Convert.ToString(E.EmployeeId);
+                        break;
+
+                    case "Supplier":
+                        Supplier S = (Supplier)x;
+                        pnlSupplierEdit.Visible = true;
+                        pnlCustomerEdit.Visible = false;
+                        pnlEmployeeEdit.Visible = false;
+                        pnlEdit.Visible = true;
+                        txtSupplierNameEdit.Text = S.Company;
+                        break;
+
+
+                    default:
+                        pnlCustomerEdit.Visible = false;
+                        pnlEmployeeEdit.Visible = false;
+                        pnlEdit.Visible = false;
+                        pnlSupplierEdit.Visible = false;
+                        break;
+                }
             }
         }
 
@@ -98,9 +105,12 @@ namespace People
             {
 
                 case "Kund":
-                    pnlCustomer.Visible = true;
-                    pnlEmployee.Visible = false;
-                    pnlSupplier.Visible = false;
+                    //Exempel på refactoring
+                    UpdatePanels(true, false, false);
+
+                    //pnlCustomer.Visible = true;
+                    //pnlEmployee.Visible = false;
+                    //pnlSupplier.Visible = false;
                     break;
 
                 case "Anställd":
@@ -124,9 +134,16 @@ namespace People
 
         }
 
+        private void UpdatePanels(bool ShowCustomerPanel, bool ShowEmployeePanel, bool ShowSupplierPanel)
+        {
+            pnlCustomer.Visible = ShowCustomerPanel;
+            pnlEmployee.Visible = ShowEmployeePanel;
+            pnlSupplier.Visible = ShowSupplierPanel;
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (txtCustomerFirstName.Text == "" || txtCustomerLastName.Text == "" || txtCustomerPhoneNumber.Text == "")
+            if (txtCustomerFirstName.Text == string.Empty || txtCustomerLastName.Text == string.Empty || txtCustomerPhoneNumber.Text == string.Empty)
             {
                 MessageBox.Show("Fyll i all information!");
             }
@@ -136,11 +153,12 @@ namespace People
                 WriteListBox();
                 txtClear();
             }
+
         }
 
         private void btnEmployeeAdd_Click(object sender, EventArgs e)
         {
-            if (txtEmployeeFirstName.Text == "" || txtEmployeeLastName.Text == "" || txtEmployeePhoneNumber.Text == "" || txtEmployeeTitle.Text == "" || txtEmployeeWage.Text == "")
+            if (txtEmployeeFirstName.Text == string.Empty || txtEmployeeLastName.Text == string.Empty || txtEmployeePhoneNumber.Text == string.Empty || txtEmployeeTitle.Text == string.Empty || txtEmployeeWage.Text == string.Empty)
             {
                 MessageBox.Show("Fyll i all information!");
             }
@@ -155,7 +173,7 @@ namespace People
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (txtSupplierFirstName.Text == "" || txtSupplierLastName.Text == "" || txtSupplierPhoneNumber.Text == "" || txtCompanyName.Text == "")
+            if (txtSupplierFirstName.Text == string.Empty || txtSupplierLastName.Text == string.Empty || txtSupplierPhoneNumber.Text == string.Empty || txtCompanyName.Text == string.Empty)
             {
                 MessageBox.Show("Fyll i all information!");
             }
@@ -226,7 +244,8 @@ namespace People
             txtClear();
         }
 
-        public void txtClear() {
+        public void txtClear()
+        {
             txtFirstNameEdit.Clear();
             txtLastNameEdit.Clear();
             txtNumberEdit.Clear();
@@ -250,7 +269,8 @@ namespace People
             txtCustomerPhoneNumber.Clear();
         }
 
-        public void hidePanels() {
+        public void hidePanels()
+        {
             pnlCustomerEdit.Visible = false;
             pnlEmployeeEdit.Visible = false;
             pnlSupplierEdit.Visible = false;
@@ -317,13 +337,15 @@ namespace People
                     SupplierCounter++;
                 }
 
-                lblCounter.Text = string.Format("Det finns {0} Kunder, {1} Anställda och {2} Leverantörer registrerade!", CustomerCounter, EmployeeCounter, SupplierCounter);
             }
+            lblCounter.Text = string.Format("Det finns {0} Kunder, {1} Anställda och {2} Leverantörer registrerade!", CustomerCounter, EmployeeCounter, SupplierCounter);
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
+
     }
 }

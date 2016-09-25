@@ -76,6 +76,8 @@
             this.btnCustomerEditCancel = new System.Windows.Forms.Button();
             this.btnCustomerSave = new System.Windows.Forms.Button();
             this.pnlEmployeeEdit = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtEmployeeId = new System.Windows.Forms.TextBox();
             this.btnEmployeeEditCancel = new System.Windows.Forms.Button();
             this.btnEmployeeSave = new System.Windows.Forms.Button();
             this.txtEmployeeWageEdit = new System.Windows.Forms.TextBox();
@@ -87,11 +89,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.txtSupplierNameEdit = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.txtEmployeeId = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.pnlCustomerEdit = new System.Windows.Forms.Panel();
-            this.txtCustomerId = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.txtCustomerId = new System.Windows.Forms.TextBox();
             this.pnlCustomer.SuspendLayout();
             this.pnlEmployee.SuspendLayout();
             this.pnlSupplier.SuspendLayout();
@@ -550,6 +550,23 @@
             this.pnlEmployeeEdit.Size = new System.Drawing.Size(254, 100);
             this.pnlEmployeeEdit.TabIndex = 15;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(16, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Id";
+            // 
+            // txtEmployeeId
+            // 
+            this.txtEmployeeId.Location = new System.Drawing.Point(43, 55);
+            this.txtEmployeeId.Name = "txtEmployeeId";
+            this.txtEmployeeId.ReadOnly = true;
+            this.txtEmployeeId.Size = new System.Drawing.Size(100, 20);
+            this.txtEmployeeId.TabIndex = 6;
+            // 
             // btnEmployeeEditCancel
             // 
             this.btnEmployeeEditCancel.Location = new System.Drawing.Point(176, 74);
@@ -650,23 +667,6 @@
             this.label19.TabIndex = 0;
             this.label19.Text = "Företag";
             // 
-            // txtEmployeeId
-            // 
-            this.txtEmployeeId.Location = new System.Drawing.Point(43, 55);
-            this.txtEmployeeId.Name = "txtEmployeeId";
-            this.txtEmployeeId.ReadOnly = true;
-            this.txtEmployeeId.Size = new System.Drawing.Size(100, 20);
-            this.txtEmployeeId.TabIndex = 6;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(16, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Id";
-            // 
             // pnlCustomerEdit
             // 
             this.pnlCustomerEdit.Controls.Add(this.label18);
@@ -678,14 +678,6 @@
             this.pnlCustomerEdit.Size = new System.Drawing.Size(254, 53);
             this.pnlCustomerEdit.TabIndex = 17;
             // 
-            // txtCustomerId
-            // 
-            this.txtCustomerId.Location = new System.Drawing.Point(60, 6);
-            this.txtCustomerId.Name = "txtCustomerId";
-            this.txtCustomerId.ReadOnly = true;
-            this.txtCustomerId.Size = new System.Drawing.Size(100, 20);
-            this.txtCustomerId.TabIndex = 2;
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -694,6 +686,14 @@
             this.label18.Size = new System.Drawing.Size(16, 13);
             this.label18.TabIndex = 5;
             this.label18.Text = "Id";
+            // 
+            // txtCustomerId
+            // 
+            this.txtCustomerId.Location = new System.Drawing.Point(60, 6);
+            this.txtCustomerId.Name = "txtCustomerId";
+            this.txtCustomerId.ReadOnly = true;
+            this.txtCustomerId.Size = new System.Drawing.Size(100, 20);
+            this.txtCustomerId.TabIndex = 2;
             // 
             // Form1
             // 

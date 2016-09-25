@@ -1,30 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="People.Peeps" Collapsed="true">
-    <Position X="5.75" Y="1.5" Width="1.5" />
+  <Class Name="People.Peeps">
+    <Position X="6" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <HashCode>AAAAAEAAAAAAAAAEAAAAQAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
       <FileName>Peeps.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="People.Customer" Collapsed="true">
+  <Class Name="People.Customer">
     <Position X="3.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
       <FileName>Peeps.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="People.Employee" Collapsed="true">
+  <Class Name="People.Employee">
     <Position X="5.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAACAAAAAAAAAACAAA=</HashCode>
       <FileName>Peeps.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="People.Supplier" Collapsed="true">
+  <Class Name="People.Supplier">
     <Position X="8" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Peeps.cs</FileName>
     </TypeIdentifier>
   </Class>
