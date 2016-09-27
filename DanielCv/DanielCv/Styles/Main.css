@@ -1,1 +1,21 @@
-﻿
+﻿#top {
+    width: 500px;
+    margin: 0 auto;
+}
+
+#links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+#links li {
+    display: inline;
+    float: left;
+}
+
+#links li a{
+    background-color: lightslategray;
+
+}
