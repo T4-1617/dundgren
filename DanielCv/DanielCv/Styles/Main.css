@@ -1,21 +1,43 @@
-﻿#top {
-    width: 500px;
-    margin: 0 auto;
+﻿body{
+    background-color: gray;
+    text-align: center;
 }
 
 #links {
+    width: 75%;
+    margin: 0 auto;
     list-style: none;
-    margin: 0;
-    padding: 0;
     overflow: auto;
+    background-color: lightgray;
+    padding: 0;
 }
 
 #links li {
-    display: inline;
-    float: left;
+    display: inline-block;
+    border: 1px solid black;
+    margin: 2px;
+    background-color: lightgray;
 }
 
 #links li a{
-    background-color: lightslategray;
-
+    display: block;
+    margin: 5px;
+    text-decoration: none;
+    color: black;           
 }
+
+#links li:hover {
+   color: white;
+}
+
+#text {
+    background-color: lightgray;
+    width: 75%;
+    margin: 0 auto;
+    
+}
+
+
+
+
+
