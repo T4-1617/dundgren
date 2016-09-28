@@ -30,11 +30,22 @@
    color: white;
 }
 
-.text {
+.main {
     background-color: lightgray;
     width: 75%;
     margin: 0 auto;
     word-break: keep-all;
+}
+
+#maintext{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#maintext2{
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: left;
 }
 
 
